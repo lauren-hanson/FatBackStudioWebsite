@@ -1,0 +1,99 @@
+.artistHeader,
+.addArtistFormHeader {
+    font-size: 50px;
+    font-weight: lighter;
+    color: #2e2029;
+}
+
+
+.artistPage {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.artists {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    color: #17070b;
+    font-size: 25px; 
+}
+
+.artistInfo { 
+    font-size: 20px; 
+}
+
+.findArtists { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+label {
+    margin-top: 25px; 
+    color: #2e2029;
+    font-size: 20px; 
+}
+
+#inputSearch { 
+    background-color: white; 
+}
+
+.editArtistButton {
+    margin-left: auto;
+}
+
+.artistImg {
+    height: 350px;
+    width: 350px;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px #17070b;
+    cursor: pointer;
+    object-fit: cover;
+
+}
+
+#notes {
+    width: 625px;
+    height: 200px;
+}
+
+.file-control {
+    background: #05030a;
+    color: white;
+}
+
+.addArtistForm {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.saveButton,
+.addArtistButton,
+.editArtistButton {
+
+    width: 100px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0px 40px 0px;
+    margin-left: 45%;
+
+}
+
+.editDeleteButtonContainer {
+    display: flex; 
+    flex-direction: row; 
+    margin-left: auto;  
+}

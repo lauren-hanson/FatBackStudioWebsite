@@ -1,0 +1,15 @@
+.socials {
+    display: flex; 
+    flex-direction: row;
+    align-content: flex-end; 
+    width: 35px; 
+    margin: 50px;
+    color: #05030a; 
+   
+
+}
+
+.logo { 
+    width: 45px; 
+    color: #05030A;
+}
