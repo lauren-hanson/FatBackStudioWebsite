@@ -1,0 +1,122 @@
+.h1, .h2 { 
+    font-weight: lighter;
+ 
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+    color: #e9dddb;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+}
+
+.login, .register {
+    background-image: url("https://res.cloudinary.com/dgwi6xvfl/image/upload/v1671727628/FatBack/backgroundimage_tj7vmd.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    padding-right: 0; 
+    color: #e9dddb;
+
+}
+
+
+.container--login, .container--register {
+    text-align: center;
+    margin-top: 200px; 
+    
+}
+
+.form--login {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+   
+}
+
+.form--register { 
+    width: 50%; 
+    margin: 50px; 
+}
+
+.form--login > fieldset > input[type="email"] {
+    width: 25em;
+   
+}
+
+.label--login {
+    width: 8rem;
+    display: inline-block;
+}
+
+.form-control {
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+.form--login {
+    background-position-x: right;
+    z-index: 1;
+    min-height: 25rem;
+    min-width: 30rem;
+    background-color: #17070b;
+    opacity: 90%; 
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    border: 1px solid #05030a; 
+    padding: 25px 50px; 
+}
+
+.inputEmail { 
+    font-size: 25px; 
+    color: #e9dddb;
+   
+}
+
+#submitButton, #registerButton { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#registerButton { 
+    margin-left: auto; 
+}
+
+label { 
+    color: #e9dddb;
+}
+
+#link{
+    color: #17070b;
+}
+
+.button--close {
+    position: relative;
+    bottom: -2rem;
+}
+

@@ -1,0 +1,75 @@
+
+import { Outlet, Route, Routes } from "react-router-dom"
+import { BookingForm } from "../booking/BookingForm"
+import { MyRequest } from "../booking/MyRequest"
+import { RequestEdit } from "../booking/RequestEdit"
+import { About } from "../home/About"
+import { GalleryView } from "../gallery/GalleryView"
+import { ArtistContainer } from "../artists/ArtistContainer"
+import { Home } from "../home/Home.js"
+// import { Login } from "../auth/Login"
+// import { Register } from "../auth/Register"
+
+import "./ApplicationViews.css"
+
+
+export const ClientViews = () => {
+
+    // const localFatBackUser = localStorage.getItem("fatback_user")
+    // const fatbackUserObject = JSON.parse(localFatBackUser)
+
+    return (
+        <Routes>
+
+
+
+            <Route path="/" element={
+                <div className="views ">
+                    <Home />
+                    <Outlet />
+                </div>
+            }>
+
+                <Route path="*" element={""} />
+                <Route path="aboutFatBack" element={<About />} />
+                <Route path="gallery" element={<GalleryView />} />
+                <Route path="artists" element={<ArtistContainer />} />
+                <Route path="reserve" element={<BookingForm />} />
+                <Route path="myrequest" element={<MyRequest />} />
+                <Route path="myrequest/:requestId" element={<RequestEdit />} />
+
+
+            </Route>
+        </Routes>
+    )
+}
+
+/*
+export const ClientViews = () => {
+
+    return (
+        <Routes>
+
+            <Route path="*" element={
+                <div className="views">
+                    <h1 className="title-main">FatBack Studio</h1>
+
+                    <Outlet />
+                </div>
+            }>
+                <Route path="*" element={<Home />} />
+                <Route path="login" element={<Login />} />
+                <Route path="register" element={<Register />} />
+                <Route path="aboutFatBack" element={<About />} />
+                <Route path="/gallery" element={<GalleryView />} />
+                <Route path="/artists" element={<ArtistContainer />} />
+                <Route path="reserve" element={<BookingForm />} />
+                <Route path="myrequest" element={<MyRequest />} />
+                <Route path="myrequest/:requestId" element={<RequestEdit />} />
+
+
+            </Route>
+        </Routes>
+    )
+}
+*/

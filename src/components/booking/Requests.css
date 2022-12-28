@@ -1,0 +1,80 @@
+.requestBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.myrequests {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px;
+    margin: 20px;
+    font-size: 15px;
+    color: #2e2029;
+
+}
+
+.requestInfo {
+    border: 5px solid #05030A;
+    padding: 10px; 
+    color: #17070b;
+    opacity: 90%; 
+    background-color: #e9dddb;
+    display: flex;
+    align-items: center;
+    opacity: 95%;
+    margin: 20px; 
+    width: 20%; 
+    font-size: 20px; 
+
+}
+
+.requestInfo:hover {
+    transform: scale(1.2);
+    z-index: 1; 
+}
+
+.acceptDenyButtonContainer { 
+    display: flex; 
+    flex-direction: row; 
+}
+
+.acceptButton,
+.denyButton {
+    width: 100px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+.statusContainer { 
+    font-size: 18px; 
+}
+
+.radioReview {
+    display: flex;
+    flex-direction: row;
+}
+
+.requestInfo,
+.acceptedBookingInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: 50px 25px;
+    margin: 20px;
+}
+
+
+.futureBookingsLink,
+.futureBookingText,
+#link {
+    text-align: center;
+    color: #17070b;
+    font-size: 25px;
+}
+
+.link {
+    color: #17070b;
+}
