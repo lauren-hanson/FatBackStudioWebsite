@@ -58,7 +58,7 @@ export const MyRequest = () => {
     }
 
     return (
-        <div className="myrequest">
+        <div >
 
 
             {requests.length ?
@@ -66,7 +66,7 @@ export const MyRequest = () => {
                     <h2 className="requestHeader">My Request</h2>
                     {requests.map(request => {
                         return (<>
-                            <div className="requestInfo" key={requestId}>
+                            <div id="myrequest" key={requestId}>
                                 <div>Band Name: {request?.bandName}</div>
                                 <div>Phone Number: {request?.phoneNumber}</div>
                                 <div>Start Date: {request?.startDate}</div>

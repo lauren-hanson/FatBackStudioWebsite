@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { About } from "../home/About"
+import { PublicAbout } from "../home/PublicAbout"
 import { PublicGalleryView } from "../gallery/PublicGalleryView"
 import { ArtistListPublic } from "../artists/ArtistListPublic"
 import { ReserveButton } from "../home/ReserveButton"
@@ -7,7 +7,7 @@ import { ReserveButton } from "../home/ReserveButton"
 import "./ApplicationViews.css"
 //import { Login } from "../auth/Login"
 import { Register } from "../auth/Register"
-import { Home } from "../home/Home"
+import { PublicHome } from "../home/PublicHome"
 
 
 export const PublicViews = () => {
@@ -20,14 +20,14 @@ export const PublicViews = () => {
 
             <Route path="/" element={
                 <div className="views">
-                    < Home />
+                    < PublicHome />
                     < ReserveButton /><br></br>
                     <Outlet />
                 </div>
             }>
 
                 <Route path="*" element={""} />
-                <Route path="aboutFatBack" element={<About />} />
+                <Route path="aboutFatBack" element={<PublicAbout />} />
                 <Route path="register" element={<Register />} />
                 {/* I think above line is where Home.js component would go? */}
                 <Route path="/gallery" element={<PublicGalleryView />} />

@@ -5,10 +5,10 @@ import "./Staff.css"
 export const AddStaff = () => {
 
     const [newStaff, setNewStaff] = useState({})
-    const [newStaffTitle, setNewStaffTitle] = useState({})
+    //const [newStaffTitle, setNewStaffTitle] = useState({})
     const [titles, setTitles] = useState([])
     const [newUser, setNewUser] = useState({
-        isStaff: false,
+        isStaff: true,
         isAdmin: false
     })
 
@@ -35,12 +35,10 @@ export const AddStaff = () => {
 
         const newStaffToSendToAPI = {
             startDate: "",
-            imageURL: ""
+            imageURL: "",
+            titleId: 0
         }
 
-        const newTitleToSendToAPI = {
-       
-        }
 
         return fetch(`http://localhost:8088/users`, {
             method: "POST",
@@ -60,18 +58,6 @@ export const AddStaff = () => {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify(newStaff)
-                })
-            })
-
-            .then(newStaff => {
-                newStaffTitle.staffId = newStaff.userId
-
-                return fetch(`http://localhost:8088/staffTitles?&_expand=staff`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(newStaffTitle)
                 })
             })
 
@@ -129,9 +115,9 @@ export const AddStaff = () => {
                         <select id="title" required
                             onChange={
                                 (event) => {
-                                    const copy = { ...newStaffTitle }
+                                    const copy = { ...newStaff }
                                     copy.titleId = parseInt(event.target.value)
-                                    setNewStaffTitle(copy)
+                                    setNewStaff(copy)
                                 }}>
                             <option value="0"></option>
 

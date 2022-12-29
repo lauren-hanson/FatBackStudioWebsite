@@ -35,10 +35,9 @@
 }
 
 .deleteImageButton {
-    width: 100px;
+    width: 15%; 
+    margin-left: 45%; 
     background-color: white;
-    padding: 10px 5px;
-    margin-left: auto; 
 
 }
 

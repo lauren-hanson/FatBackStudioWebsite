@@ -34,7 +34,7 @@ export const Requests = () => {
                     <div className="requestBox">
                         {requests.map(request => {
                             return (<>
-                                <div className="requestInfo" key={`requests--${request.id}`}>
+                                <div className="requestInfo" key={`request--${request.id}`}>
                                     <div>Band Name: {request.bandName}</div>
                                     <div>Phone Number: {request.phoneNumber}</div>
                                     <div>Start Date: {request.startDate}</div>

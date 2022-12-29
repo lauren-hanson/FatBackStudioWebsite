@@ -79,7 +79,7 @@ export const GalleryView = () => {
             <div className="gallery">
                 {
                     photos.map(photo => {
-                        return <div><img className="galleryImg" key={photo.id}
+                        return <div><img className="galleryImg" key={`photo--${photo.id}`}
                             src={photo.imageURL} />
                             {handleDeleteImageButton(photo.id)}
                         </div>

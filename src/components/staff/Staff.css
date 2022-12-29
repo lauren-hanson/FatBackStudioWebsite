@@ -26,6 +26,9 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly; 
+    align-items: center; 
+    align-content: center; 
+    margin-bottom: 20px; 
  
 
 }
@@ -44,7 +47,7 @@
 }
 
 .title {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #title { 
@@ -117,4 +120,8 @@
     background-color: white;
     padding: 20px;
     margin-left: 45%; 
+}
+
+.editStaffButton { 
+    background-color: white;
 }
