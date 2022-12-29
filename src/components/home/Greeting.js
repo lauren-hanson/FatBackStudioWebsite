@@ -4,6 +4,7 @@ import "./About.css"
 export const Greeting = () => {
 
     const [users, setUsers] = useState([])
+    const [pendingRequests, setPendingRequests] = useState([])
 
     const localFatBackUser = localStorage.getItem("fatback_user")
     const fatbackUserObject = JSON.parse(localFatBackUser)
@@ -14,13 +15,23 @@ export const Greeting = () => {
             .then(userInfo => {
                 setUsers(userInfo)
             })
-    }, [users])
+    }, [])
+
+    useEffect(() => {
+        fetch(`http://localhost:8088/requests?isPending=true`)
+            .then(response => response.json())
+            .then(userInfo => {
+                setPendingRequests(userInfo)
+            })
+    }, [])
+
+
 
     return (
         <div className="greeting">
-            {fatbackUserObject.staff ?
-                "Admin View" : "" 
-                // `Welcome ${users.fullName}` : ""
+            {fatbackUserObject.staff && pendingRequests ?
+                 `Welcome. You have 1 new request`: "" 
+                
             }
         </div>
     )

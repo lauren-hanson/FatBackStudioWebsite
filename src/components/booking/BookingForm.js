@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import Moment from 'moment';
 import { BookingStatus } from "./BookingStatus.js"
 import "./BookingForm.css"
 
@@ -11,7 +10,6 @@ export const BookingForm = () => {
 
     const [genres, setGenres] = useState([])
     const [requests, setRequests] = useState([])
-    const formatDate = Moment().format("MMM Do YY");
 
     const [request, setBookingForm] = useState({
 
@@ -126,8 +124,8 @@ export const BookingForm = () => {
 
     return (
         <>
-        {requests ? 
-           <BookingStatus requests={requests}/>  :
+            {requests ?
+                <BookingStatus requests={requests} /> :
                 < div className="bookingForm" >
                     <h2 className="bookingHeader">Booking Form</h2>
                     <form>
@@ -230,8 +228,9 @@ export const BookingForm = () => {
                                 <label className="label" htmlFor="date">
                                     Start Date:
                                 </label>
-                                <input
 
+                                <input
+                            
                                     type="date"
                                     required
                                     className="form-control"
@@ -253,7 +252,9 @@ export const BookingForm = () => {
                                 <label htmlFor="date">
                                     End Date:
                                 </label>
+
                                 <input
+                                    max={request.endDate}
                                     required
                                     type="date"
                                     className="form-control"
@@ -456,7 +457,7 @@ export const BookingForm = () => {
                             Submit Request
                         </button>
                     </form>
-                </div>}         
+                </div>}
         </>
 
     )

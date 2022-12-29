@@ -21,6 +21,17 @@
 
 }
 
+.addImagePage {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid #2e2029;
+    padding-bottom: 20px; 
+}
+
 .galleryImg {
     display: flex;
     flex-flow: column nowrap;

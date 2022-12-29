@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./Artist.css"
 
 export const ArtistEdit = () => { 
 
@@ -52,7 +53,7 @@ export const ArtistEdit = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <h3 htmlFor="name">Band Name: </h3>
+                        <h3 className="label" htmlFor="name">Band Name: </h3>
                         <input
                             required
                             id="name"
@@ -70,7 +71,7 @@ export const ArtistEdit = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <h3 htmlFor="name">Recording Start Date: </h3>
+                        <h3 className="label" htmlFor="name">Recording Start Date: </h3>
                         <input
                             required
                             id="name"
@@ -87,7 +88,7 @@ export const ArtistEdit = () => {
                             
                 <fieldset>
                     <div className="form-group">
-                        <h3 htmlFor="name">Recording End Date: </h3>
+                        <h3 className="label" htmlFor="name">Recording End Date: </h3>
                         <input
                             required
                             id="name"
@@ -104,7 +105,7 @@ export const ArtistEdit = () => {
 
                 <fieldset>
                 <div className="form-group">
-                        <h3>Image : </h3>
+                        <h3 className="label" >Image : </h3>
                         <input
                             required
                             id="imgURL"
@@ -123,7 +124,7 @@ export const ArtistEdit = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <h3 htmlFor="notes">Notes: </h3>
+                        <h3 className="label" htmlFor="notes">Notes: </h3>
                         <textarea
                             required
                             id="notes"

@@ -1,6 +1,7 @@
 .staffPage {
     margin: 50px;
     color: #2e2029;
+    border: 5px solid #2e2029;
 }
 
 .staffHeader,
@@ -30,8 +31,8 @@
     align-content: center; 
     margin-bottom: 20px; 
     padding: 20px; 
-    margin: 20px; 
-    width: 400px; 
+    margin: 20px 0px; 
+    width: 350px; 
 
 }
 
