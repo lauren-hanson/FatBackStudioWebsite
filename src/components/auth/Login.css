@@ -21,12 +21,14 @@ fieldset {
     background-size: 100%; 
     padding-right: 0; 
     color: #e9dddb;
+    margin-top: 150px; 
 
 }
 
 
 .container--login, .container--register {
     text-align: center;
+    padding: 75px; 
    
     
 }

@@ -2,6 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { BookingForm } from "../booking/BookingForm"
 import { Requests } from "../booking/Requests"
 import { About } from "../home/About"
+import {Greeting } from "../home/Greeting"
 import { AddStaff } from "../staff/AddStaff"
 import { StaffEdit } from "../staff/StaffEdit"
 import { GalleryView } from "../gallery/GalleryView"
@@ -10,7 +11,6 @@ import { ArtistContainer } from "../artists/ArtistContainer"
 import { AddArtist } from "../artists/AddArtist.js"
 import { ArtistEdit } from "../artists/ArtistEdit.js"
 import { FutureBookings } from "../booking/FutureBookings"
-//import { StudioCalendar } from "../calendar/Calendar"
 import { Home } from "../home/Home.js"
 import "./ApplicationViews.css"
 
@@ -23,9 +23,9 @@ export const StaffViews = () => {
 
             <Route path="/" element={
                 <div className="views">
-               
                     <Home />
                     <Outlet />
+                    <Greeting /> 
                 </div>
             }>
                 <Route path="*" element={""} />
@@ -40,9 +40,7 @@ export const StaffViews = () => {
                 <Route path="booking" element={<BookingForm />} />
                 <Route path="requests" element={<Requests />} />
                 <Route path="futurebookings" element={<FutureBookings />} />
-                {/* <Route path="calendar" element={<StudioCalendar />} /> */}
-
-
+              
             </Route>
         </Routes>
     )
