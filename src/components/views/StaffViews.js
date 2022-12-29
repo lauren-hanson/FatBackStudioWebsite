@@ -23,7 +23,7 @@ export const StaffViews = () => {
 
             <Route path="/" element={
                 <div className="views">
-                
+               
                     <Home />
                     <Outlet />
                 </div>

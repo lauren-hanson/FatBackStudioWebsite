@@ -41,14 +41,21 @@
 }
 
 .acceptButton,
-.denyButton {
+.denyButton,
+.saveNotesButton {
     width: 100px;
     background-color: white;
     padding: 10px;
     margin: 10px 5px;
 }
 
-.statusContainer { 
+#textNotes { 
+    background-color: white; 
+}
+
+.staffNotesContainer { 
+    display: flex; 
+    flex-direction: column; 
     font-size: 18px; 
 }
 

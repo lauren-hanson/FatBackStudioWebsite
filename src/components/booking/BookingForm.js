@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import Moment from 'moment';
 import { BookingStatus } from "./BookingStatus.js"
 import "./BookingForm.css"
 
@@ -10,7 +11,7 @@ export const BookingForm = () => {
 
     const [genres, setGenres] = useState([])
     const [requests, setRequests] = useState([])
- 
+    const formatDate = Moment().format("MMM Do YY");
 
     const [request, setBookingForm] = useState({
 
@@ -451,7 +452,7 @@ export const BookingForm = () => {
                             onClick={(clickEvent) => {
                                 submitButtonClick(clickEvent)
                             }}
-                            className="submitButton">
+                            className="submitFormButton">
                             Submit Request
                         </button>
                     </form>

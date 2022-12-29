@@ -40,7 +40,8 @@ fieldset {
 
 .form--register { 
     width: 50%; 
-    margin: 50px; 
+    margin-top: 50px; 
+    
 }
 
 .form--login > fieldset > input[type="email"] {
@@ -88,7 +89,6 @@ fieldset {
 .inputEmail { 
     font-size: 25px; 
     color: #e9dddb;
-   
 }
 
 #submitButton, #registerButton { 
@@ -107,12 +107,8 @@ fieldset {
     margin-left: auto; 
 }
 
-label { 
+label, #link { 
     color: #e9dddb;
-}
-
-#link{
-    color: #17070b;
 }
 
 .button--close {
@@ -120,3 +116,6 @@ label {
     bottom: -2rem;
 }
 
+#fullName { 
+    width: 75%; 
+}

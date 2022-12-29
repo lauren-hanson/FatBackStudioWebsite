@@ -53,7 +53,7 @@ export const Requests = () => {
                                     <div className="radioReview">Session Musicians:
                                         {request.sessionMusicians === true ?
                                             <div>Yes</div> :
-                                            <div> No</div>
+                                            <div>No</div>
                                         }
 
                                     </div>

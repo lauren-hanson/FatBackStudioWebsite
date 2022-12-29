@@ -1,26 +1,27 @@
-// //import { useEffect, useState } from "react"
-// import "./About.css"
+import { useEffect, useState } from "react"
+import "./About.css"
 
-// export const Greeting = () => {
+export const Greeting = () => {
 
+    const [users, setUsers] = useState([])
 
-//     //const [staffMembers, setStaff] = useState([])
+    const localFatBackUser = localStorage.getItem("fatback_user")
+    const fatbackUserObject = JSON.parse(localFatBackUser)
 
-//     const localFatBackUser = localStorage.getItem("fatback_user")
-//     const fatbackUserObject = JSON.parse(localFatBackUser)
+    useEffect(() => {
+        fetch(`http://localhost:8088/users?isStaff=true`)
+            .then(response => response.json())
+            .then(userInfo => {
+                setUsers(userInfo)
+            })
+    }, [users])
 
-//     // useEffect(() => {
-//     //     fetch(`http://localhost:8088/users`)
-//     //         .then(response => response.json())
-//     //         .then(staffInfo => {
-//     //             setStaff(staffInfo)
-//     //         })
-//     // }, [])
-
-//     return (
-//         <div className="greeting">
-//             {fatbackUserObject.staff ?
-//                 <>Welcome {fatbackUserObject.fullName}</> : ""}
-//         </div>
-//     )
-// }
+    return (
+        <div className="greeting">
+            {fatbackUserObject.staff ?
+                "Admin View" : "" 
+                // `Welcome ${users.fullName}` : ""
+            }
+        </div>
+    )
+}

@@ -123,15 +123,15 @@ body {
 
 #myrequest { 
     border: 5px solid #05030A;
-    padding: 10px; 
+    padding: 20px; 
     color: #17070b;
     opacity: 90%; 
     background-color: #e9dddb;
     display: flex;
     align-items: center;
     opacity: 95%;
-    margin-left: 38%; 
-    width: 20%; 
+    margin-left: 35%; 
+    width: 25%; 
     font-size: 20px; 
 
 }
@@ -140,13 +140,11 @@ input.radio {
     border-radius: 50%;
     width: 16px;
     height: 16px;
-
     border: 2px solid #999;
     transition: 0.2s all linear;
     margin-right: 5px;
-
     position: relative;
-    top: 4px;
+    top: 30px;
 }
 
 input[type="text"],
@@ -155,22 +153,23 @@ input.text {
 
 }
 
-.submitButton {
+.submitButton,
+.submitFormButton {
     float: right;
     width: 100px;
     padding: 25px;
+    background-color: white; 
 
 }
 
-
-/* 
-.popup { 
-    visibility:hidden;  
-    width: 330px;
-    height: auto;
-    background: #dde1e7;
-    padding: 30px 35px 40px;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-} */
+window.alert {
+    border: 1px dotted cadetblue;
+    padding: 1rem;
+    background-color: rgb(218, 230, 247);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    animation: 1s slideDown;
+  }

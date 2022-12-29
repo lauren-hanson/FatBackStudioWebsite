@@ -6,21 +6,36 @@ export const StaffEdit = () => {
 
     const { staffId } = useParams()
     const [titles, setTitles] = useState([])
-    const [updateStaff, setUpdateStaff] = useState({
+    const [updateUser, setUpdateUser] = useState({
         fullName: "",
         email: ""
+    })
+    const [updateStaff, setUpdateStaff] = useState({
+        startDate: "",
+        imageURL: "",
+        titleId: 0
     })
 
 
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:8088/staff?&_expand=user&_expand=title/${staffId}`)
+        fetch(`http://localhost:8088/users/${staffId}`)
+            .then(response => response.json())
+            .then((staffInfo) => {
+                setUpdateUser(staffInfo)
+            })
+    }, [])
+
+
+    useEffect(() => {
+        fetch(`http://localhost:8088/staff/${staffId}`)
             .then(response => response.json())
             .then((staffInfo) => {
                 setUpdateStaff(staffInfo)
             })
     }, [])
+
 
     useEffect(() => {
         fetch(`http://localhost:8088/titles`)
@@ -35,15 +50,27 @@ export const StaffEdit = () => {
     const handleUpdateStaffButton = (event) => {
         event.preventDefault()
 
-        return fetch(`http://localhost:8088/staff?&_expand=user&_expand=title/${staffId}`, {
-            method: "PATCH",
+        return fetch(`http://localhost:8088/users/${staffId}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(updateStaff)
+            body: JSON.stringify(updateUser)
         })
 
             .then((response) => response.json())
+
+            .then(() => {
+                return fetch(`http://localhost:8088/staff/${staffId}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(updateStaff)
+                })
+            })
+
+
             .then(() => {
                 navigate("/aboutFatBack")
             })
@@ -63,12 +90,12 @@ export const StaffEdit = () => {
                             required autoFocus
                             type="text"
                             className="form-control"
-                            value={updateStaff.fullName}
+                            value={updateUser.fullName}
                             onChange={
                                 (event) => {
-                                    const copy = { ...updateStaff }
+                                    const copy = { ...updateUser }
                                     copy.fullName = event.target.value
-                                    setUpdateStaff(copy)
+                                    setUpdateUser(copy)
                                 }
                             }
                         />
@@ -82,12 +109,12 @@ export const StaffEdit = () => {
                             required autoFocus
                             type="text"
                             className="form-control"
-                            value={updateStaff.email}
+                            value={updateUser.email}
                             onChange={
                                 (event) => {
-                                    const copy = { ...updateStaff }
+                                    const copy = { ...updateUser }
                                     copy.email = event.target.value
-                                    setUpdateStaff(copy)
+                                    setUpdateUser(copy)
                                 }
                             }
                         />
@@ -97,14 +124,19 @@ export const StaffEdit = () => {
                 <fieldset >
                     <div className="form-group">
                         <label className="label" htmlFor="title" >Title:</label>
-                        <select id="title" required
+
+                        <option value="{updateStaff.titleId}"></option>
+
+                        <select id="title"
+                            required
+                            value={updateStaff.titleId}
                             onChange={
                                 (event) => {
                                     const copy = { ...updateStaff }
                                     copy.titleId = parseInt(event.target.value)
                                     setUpdateStaff(copy)
                                 }}>
-                            <option value="0"></option>
+                          
 
                             {
                                 titles.map(
@@ -129,7 +161,7 @@ export const StaffEdit = () => {
                             required autoFocus
                             type="date"
                             className="form-control"
-                            value={updateStaff.startDate}
+                            defaultValue={updateStaff.startDate}
                             onChange={
                                 (event) => {
                                     const copy = { ...updateStaff }
