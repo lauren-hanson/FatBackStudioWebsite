@@ -19,7 +19,7 @@ export const Requests = () => {
                 .then((requestInfo) => {
                     setRequest(requestInfo)
                 })
-        }, 
+        }, []
     )
 
     // [, refresh]
@@ -96,7 +96,7 @@ export const Requests = () => {
             onClick={() => {
                 navigate("/futurebookings")
             }}>
-            <p className="futureBookingText">See your <Link to="/futurebookings" id="link">future bookings </Link></p>
+            <p className="futureBookingText">See your <Link to="/futurebookings" id="futurebookinglink">future bookings </Link></p>
         </div>
     </>)
 }

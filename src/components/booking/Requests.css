@@ -18,12 +18,12 @@
 .requestInfo {
     border: 5px solid #05030A;
     padding: 10px; 
-    color: #17070b;
+    background-color: #17070b;
     opacity: 90%; 
-    background-color: #e9dddb;
+    color: #e9dddb;
     display: flex;
     align-items: center;
-    opacity: 95%;
+    opacity: 87%;
     margin: 20px; 
     width: 20%; 
     font-size: 20px; 
@@ -76,12 +76,9 @@
 
 .futureBookingsLink,
 .futureBookingText,
-#link {
+#futurebookinglink {
     text-align: center;
     color: #17070b;
     font-size: 25px;
 }
 
-.link {
-    color: #17070b;
-}

@@ -2,7 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { BookingForm } from "../booking/BookingForm"
 import { Requests } from "../booking/Requests"
 import { About } from "../home/About"
-import {Greeting } from "../home/Greeting"
+//import {Greeting } from "../home/Greeting"
 import { AddStaff } from "../staff/AddStaff"
 import { StaffEdit } from "../staff/StaffEdit"
 import { GalleryView } from "../gallery/GalleryView"
@@ -24,8 +24,8 @@ export const StaffViews = () => {
             <Route path="/" element={
                 <div className="views">
                     <Home />
+                    {/* <Greeting />  */}
                     <Outlet />
-                    <Greeting /> 
                 </div>
             }>
                 <Route path="*" element={""} />
@@ -46,38 +46,3 @@ export const StaffViews = () => {
     )
 }
 
-
-/*
-export const StaffViews = () => {
-    <Routes>
-
-        <Route path="*" element={
-            <div className="views">
-                <h1 className="title-main">FatBack Studio</h1>
-
-                <Outlet />
-            </div>
-        } />
-
-        <Route path="/" element={
-            <div className="views">
-                <h1 className="title-main">FatBack Studio</h1>
-
-
-                <Outlet />
-            </div>
-        }>
-            <Route path="*" element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="aboutFatBack" element={<About />} />
-            <Route path="requests" element={<Requests />} />
-            <Route path="futurebookings" element={<FutureBookings />} />
-            <Route path="calendar" element={<Calendar />} />
-            <Route path="/gallery" element={<GalleryView />} />
-            <Route path="/artists" element={<ArtistContainer />} />
-
-        </Route>
-    </Routes>
-}
-*/

@@ -33,11 +33,12 @@ export const Login = () => {
                     window.alert("Invalid login")
                 }
             })
+            
             .then(() => {
                 if (from === "reserveButton/reserve") {
                     navigate("/reserve")
                 } else {
-                    navigate("/myrequest")
+                    navigate("/")
                 }
             })
     }
@@ -66,7 +67,7 @@ export const Login = () => {
                     </form>
                 </section>
                 <section className="link-register">
-                    <Link to="/register" id="link">Not a member yet?</Link>
+                    <Link to="/register" id="loginlink">Not a member yet?</Link>
                 </section>
             </main>
         </div>

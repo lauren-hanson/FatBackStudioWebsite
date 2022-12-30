@@ -14,6 +14,9 @@ import "./FatBackStudio.css"
 export const FatBackStudio = () => {
 
     return <Routes>
+        
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
 		<Route path="*" element={
 			<Authorized>
@@ -25,8 +28,6 @@ export const FatBackStudio = () => {
 
 		} />
 
-		<Route path="/login" element={<Login />} />
-		<Route path="/register" element={<Register />} />
 
     </Routes>
 }

@@ -116,15 +116,6 @@ export const StaffList = ({ id }) => {
                                                 Edit
                                             </button> </> : ""
                                 }
-
-                                {/*                                 
-                                {staffTitles.map(title => {
-                                    if (title.id === staff.titleId) {
-                                        return <div className="title">{title?.title?.type}</div>
-
-                                    }
-
-                                })} */}
                             </div>
 
                         </div>
