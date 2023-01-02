@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {ModalTest} from "./ModalTest"
+//import {ModalTest} from "./ModalTest"
 
 export const ClientGreeting = () => {
 
@@ -8,10 +8,10 @@ export const ClientGreeting = () => {
     const localFatBackUser = localStorage.getItem("fatback_user")
     const fatbackUserObject = JSON.parse(localFatBackUser)
 
-    // const windowAlert = () => {
+    const windowAlert = () => {
 
-    //     alert(`Welcome to FatBack Studio!`)
-    // }
+        alert(`Welcome to FatBack Studio!`)
+    }
 
     useEffect(() => {
 
@@ -24,8 +24,8 @@ export const ClientGreeting = () => {
             })
 
             .then(() => {
-                <ModalTest /> 
-                // windowAlert()
+                // <ModalTest /> 
+                windowAlert()
             })
 
 

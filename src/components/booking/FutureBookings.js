@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { Title } from '../home/Title'
 import "./BookingForm.css"
 
 export const FutureBookings = () => {
@@ -18,6 +19,7 @@ export const FutureBookings = () => {
 
   return (
     <>
+    <Title/>
       <div className="myrequests">
         <h2 className="futureBookingsHeader">Future Bookings</h2>
         {requests.length ?

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-// import {App} from "./RequestEditAppTest"
 import "./BookingForm"
-import "./BookingFormPopUp.css"
 
 
 export const MyRequest = () => {

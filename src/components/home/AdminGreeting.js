@@ -13,7 +13,7 @@ export const AdminGreeting = ({ users }) => {
 
     const windowAlert = () => {
 
-        if (requests.isPending = true) {
+        if (requests.isPending=true) {
             return alert(
                 `Welcome. You have new pending requests.`
                 // `Welcome ${users.fullName}. You have ${pendingRequests.length} pending requests.`

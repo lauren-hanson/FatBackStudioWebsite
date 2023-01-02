@@ -3,7 +3,7 @@ import "./Requests.css"
 
 export const DenyButton = ({ id }) => {
 
-    const [requests, setRequest] = useState([])
+    const [requests, setDeniedRequest] = useState([])
     const [refresh, setRefresh] = useState(true)
 
     useEffect(
@@ -11,9 +11,9 @@ export const DenyButton = ({ id }) => {
             fetch(`http://localhost:8088/requests?_expand=genre&_sort=startDate`)
                 .then(response => response.json())
                 .then((requestInfo) => {
-                    setRequest(requestInfo)
+                    setDeniedRequest(requestInfo)
                 })
-        }, [, refresh]
+        }, [ , refresh]
     )
 
     const denyRequest = (event) => {
@@ -35,10 +35,6 @@ export const DenyButton = ({ id }) => {
 
             .then(
                 setRefresh(!refresh)
-            )
-
-            .then(
-               setRequest()
             )
     }
 

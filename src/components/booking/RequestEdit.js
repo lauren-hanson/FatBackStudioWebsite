@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import "./BookingForm.css"
-import "./BookingFormPopUp.css"
 
 export const RequestEdit = () => {
 

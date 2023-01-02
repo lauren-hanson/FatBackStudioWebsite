@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import "./Requests.css"
 
 export const AcceptButton = ({ id }) => {
 
-    const [requests, setAcceptedRequest] = useState([])
+    const [requests, setRequest] = useState([])
     const [refresh, setRefresh] = useState(true)
+
+    const navigate = useNavigate()
 
     useEffect(
         () => {
             fetch(`http://localhost:8088/requests?_expand=genre&_sort=startDate`)
                 .then(response => response.json())
                 .then((requestInfo) => {
-                    setAcceptedRequest(requestInfo)
+                    setRequest(requestInfo)
                 })
-        }, [, refresh]
+        }, [ , refresh]
     )
-
-    
 
     const acceptRequestButton = (event) => {
         event.preventDefault()
 
         const requestAcceptStatusForAPI = {
             isAccepted: true,
-            isPending: false
+            isPending: false,
         }
 
         fetch(`http://localhost:8088/requests/${id}`, {
@@ -38,6 +39,11 @@ export const AcceptButton = ({ id }) => {
             .then(
                 setRefresh(!refresh)
             )
+
+            .then(() => {
+                navigate("/requests")
+            })
+
     }
 
     // function refreshPage() {

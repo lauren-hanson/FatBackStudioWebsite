@@ -8,7 +8,7 @@ import "./Requests.css"
 export const Requests = () => {
 
     const [requests, setRequest] = useState([])
-    //const [refresh, setRefresh] = useState(true)
+    // const [refresh, setRefresh] = useState(true)
 
 
     const navigate = useNavigate()
@@ -78,7 +78,7 @@ export const Requests = () => {
                                         <br></br>
                                         <br></br>
                                         
-                                    <div className="statusContainer ">
+                                    <div className="statusContainer">
                                         <AcceptDenyContainer request={request} id={request.id} />
                                     </div>
                                 </div>

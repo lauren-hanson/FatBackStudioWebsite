@@ -1,30 +1,30 @@
-import "./ModalTest.css"
+// import "./ModalTest.css"
 
-export const ModalTest = () => { 
+// export const ModalTest = () => { 
 
-    const [modal, setModal] = useState(false)
+//     const [modal, setModal] = useState(false)
 
-    const toggleModal = () => { 
-        setModal(!modal)
-    }
+//     const toggleModal = () => { 
+//         setModal(!modal)
+//     }
 
-    return ( <>
-    <button
-    onClick={toggleModal}>
-        Open
-    </button>
-    <div>
-        <div className="modal__overlay"></div>
-        <div className="modal__window">
-            Hello Modal
-        </div>
-        <p>WELCOME</p>
-        <button
-        className="modal__close" 
-        onClick={toggleModal}>Close</button>
-    </div>
-    </>)
-}
+//     return ( <>
+//     <button
+//     onClick={toggleModal}>
+//         Open
+//     </button>
+//     <div>
+//         <div className="modal__overlay"></div>
+//         <div className="modal__window">
+//             Hello Modal
+//         </div>
+//         <p>WELCOME</p>
+//         <button
+//         className="modal__close" 
+//         onClick={toggleModal}>Close</button>
+//     </div>
+//     </>)
+// }
 
 // export const ModalWindow = {
 
