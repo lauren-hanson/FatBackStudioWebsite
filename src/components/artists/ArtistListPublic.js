@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Title } from '../home/Title'
 
 import "./Artist.css"
 
@@ -29,6 +30,7 @@ export const ArtistListPublic = () => {
 
     return (
         <>
+        <Title /> 
             < div className="artistPage" >
                 <h2 className="artistHeader">Artists</h2>
                 <div className="artists">

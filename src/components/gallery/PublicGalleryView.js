@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Title } from '../home/Title'
 import "./Gallery.css"
 
 export const PublicGalleryView = () => {
@@ -17,6 +18,8 @@ export const PublicGalleryView = () => {
 
 
     return (
+        <>
+        <Title/>
         <div className="galleryPage">
             <h3 className="galleryHeader">Gallery</h3>
             <div className="gallery">
@@ -31,5 +34,6 @@ export const PublicGalleryView = () => {
                 }
             </div>
         </div>
+        </>
     )
 }

@@ -14,10 +14,8 @@ import "./FatBackStudio.css"
 export const FatBackStudio = () => {
 
     return <Routes>
-        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
 		<Route path="*" element={
 			<Authorized>
 				<>
@@ -27,80 +25,6 @@ export const FatBackStudio = () => {
 			</Authorized>
 
 		} />
-
-
     </Routes>
 }
 
-/*
-export const FatBackStudio = () => {
-	
-    return <Routes>
-
-        <Route path="*" element={
-            <Authorized>
-                <>
-                    <NavBar />
-                    <ApplicationViews />
-                </>
-            </Authorized>
-
-        } />
-
-    <Route path="/login" element={<Login />} />
-    <Route path="/register" element={<Register />} /> 
-    </Routes>
-}
-*/
-
-/*
-export const FatBackStudio = () => {
-
-    return <Routes>
-
-        <Route path="/" element={
-            // <Authorized>
-            <>
-                <NavBar />
-                <ApplicationViews />
-            </>
-            // </Authorized>
-
-        } />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-
-        <Route path="reserve" element={
-            <Authorized>
-                <>
-                    <NavBar />
-                    <BookingForm />
-
-                </>
-            </Authorized>
-        } />
-
-        <Route path="myrequest" element={
-            <Authorized>
-                <>
-                    <NavBar />
-                    <MyRequest />
-
-                </>
-            </Authorized>
-        } />
-
-        <Route path="myrequest/:requestId" element={
-            <Authorized>
-                <>
-                    <NavBar />
-                    <RequestEdit />
-
-                </>
-            </Authorized>
-        } />
-
-    </Routes>
-}
-*/

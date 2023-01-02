@@ -37,6 +37,9 @@ export const DenyButton = ({ id }) => {
                 setRefresh(!refresh)
             )
 
+            .then(
+               setRequest()
+            )
     }
 
     return (
@@ -45,7 +48,7 @@ export const DenyButton = ({ id }) => {
                 onClick={(clickEvent) => {
 
                     denyRequest(clickEvent)
-            
+
                 }}
                 className="denyButton" >
                 Deny Request

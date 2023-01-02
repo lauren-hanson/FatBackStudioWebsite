@@ -44,7 +44,7 @@ export const StaffNavBar = () => {
                         <Link className="navbar_link" to="" onClick={() => {
                             refreshPage()
                             localStorage.removeItem("fatback_user")
-                            navigate("/home")
+                            navigate("/")
                         }}>Logout</Link>
                     </li>
                     : ""
@@ -52,5 +52,3 @@ export const StaffNavBar = () => {
         </ul>
     )
 }
-
-// navigate("/", {replace: true})

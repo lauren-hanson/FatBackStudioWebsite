@@ -2,7 +2,6 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { BookingForm } from "../booking/BookingForm"
 import { Requests } from "../booking/Requests"
 import { About } from "../home/About"
-//import {Greeting } from "../home/Greeting"
 import { AddStaff } from "../staff/AddStaff"
 import { StaffEdit } from "../staff/StaffEdit"
 import { GalleryView } from "../gallery/GalleryView"
@@ -23,11 +22,11 @@ export const StaffViews = () => {
 
             <Route path="/" element={
                 <div className="views">
-                    <Home />
-                    {/* <Greeting />  */}
                     <Outlet />
+                    
                 </div>
             }>
+                <Route path="/" element={<Home />} />
                 <Route path="*" element={""} />
                 <Route path="aboutFatBack" element={<About />} />
                 <Route path="aboutFatBack/addstaff" element={<AddStaff />} />

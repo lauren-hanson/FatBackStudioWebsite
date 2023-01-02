@@ -24,7 +24,7 @@ export const FutureBookings = () => {
           <div className="requestBox">
             {requests.map(request => {
               return (<>
-                <div className="acceptedBookingInfo" key={`requests--${request.id}`}>
+                <div className="acceptedBookingInfo requestInfo" key={`requests--${request.id}`}>
                   <div>Band Name: {request.bandName}</div>
                   <div>Phone Number: {request.phoneNumber}</div>
                   <div>Email: {request?.user?.email}</div>

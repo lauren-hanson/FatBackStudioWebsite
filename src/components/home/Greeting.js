@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { AdminGreeting } from "./AdminGreeting"
 import { StaffGreeting } from "./StaffGreeting"
+import { ClientGreeting } from "./ClientGreeting"
 import "./About.css"
 
 export const Greeting = () => {
@@ -72,9 +73,10 @@ export const Greeting = () => {
 
     if (fatbackUserObject.admin) {
         return <AdminGreeting users={users} />
-        //return <ModalWindow users={users} />
     } else if (fatbackUserObject.staff) {
         return <StaffGreeting users={users} />
+    } else if (!fatbackUserObject.staff) {
+        return <ClientGreeting />
     }
 
 }

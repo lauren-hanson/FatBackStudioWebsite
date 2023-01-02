@@ -36,7 +36,7 @@ export const Login = () => {
             
             .then(() => {
                 if (from === "reserveButton/reserve") {
-                    navigate("/reserve")
+                    navigate("/")
                 } else {
                     navigate("/")
                 }

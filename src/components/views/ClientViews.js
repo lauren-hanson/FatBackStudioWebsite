@@ -18,11 +18,12 @@ export const ClientViews = () => {
         <Routes>
             <Route path="/" element={
                 <div className="views ">
-                    <Home />
                     <Outlet />
+                    <Home />
                 </div>
             }>
 
+                <Route path="/" element={<Home />} />
                 <Route path="*" element={""} />
                 <Route path="aboutFatBack" element={<About />} />
                 <Route path="gallery" element={<GalleryView />} />

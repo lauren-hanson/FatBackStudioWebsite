@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+// import {App} from "./RequestEditAppTest"
 import "./BookingForm"
 import "./BookingFormPopUp.css"
 
@@ -78,15 +79,15 @@ export const MyRequest = () => {
 
                                 <div className="radioReview">Musicians:
                                     {request.musicianRequest === true ?
-                                        <div>Yes</div> :
-                                        <div>No</div>
+                                        <div> Yes</div> :
+                                        <div> No</div>
                                     }
 
                                 </div>
 
                                 <div className="radioReview">Session Musicians:
                                     {request.sessionMusicians === true ?
-                                        <div>Yes</div> :
+                                        <div> Yes</div> :
                                         <div> No</div>
                                     }
 
@@ -94,8 +95,8 @@ export const MyRequest = () => {
 
                                 <div className="radioReview">Photos:
                                     {request.photoRequest === true ?
-                                        <div>Yes</div> :
-                                        <div>No</div>
+                                        <div> Yes</div> :
+                                        <div> No</div>
                                     }
 
                                 </div>

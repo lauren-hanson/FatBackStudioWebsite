@@ -35,15 +35,3 @@ export const PublicNavBar = () => {
 
 
 
-
-
-{/* {
-            localStorage.getItem("fatback_user")
-                ? <li className="navbar_item navbar_logout">
-                    <Link className="navbar_link" to="" onClick={() => {
-                        localStorage.removeItem("fatback_user")
-                        navigate("/", {replace: true})
-                    }}>Logout</Link>
-                </li>
-                : ""
-        }  */}

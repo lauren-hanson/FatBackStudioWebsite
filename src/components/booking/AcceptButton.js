@@ -13,8 +13,10 @@ export const AcceptButton = ({ id }) => {
                 .then((requestInfo) => {
                     setAcceptedRequest(requestInfo)
                 })
-        }, [ , refresh]
+        }, [, refresh]
     )
+
+    
 
     const acceptRequestButton = (event) => {
         event.preventDefault()

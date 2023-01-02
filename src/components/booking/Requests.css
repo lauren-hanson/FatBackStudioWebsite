@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
+    font-size: 23px;
 }
 
 .myrequests {
@@ -15,18 +15,20 @@
 
 }
 
+
 .requestInfo {
     border: 5px solid #05030A;
-    padding: 10px; 
+    padding: 20px; 
     background-color: #17070b;
     opacity: 90%; 
     color: #e9dddb;
     display: flex;
+    flex-direction: column; 
     align-items: center;
     opacity: 87%;
     margin: 20px; 
-    width: 20%; 
-    font-size: 20px; 
+    width: 35%; 
+    font-size: 23px; 
 
 }
 
@@ -64,14 +66,19 @@
     flex-direction: row;
 }
 
-.requestInfo,
+/* .requestInfo,
 .acceptedBookingInfo {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center; 
+    align-content: center; 
     padding: 50px 25px;
     margin: 20px;
-}
+    width: 100%; 
+    font-size: 23px; 
+
+} */
 
 
 .futureBookingsLink,

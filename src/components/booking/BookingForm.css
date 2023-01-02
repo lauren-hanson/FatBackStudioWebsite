@@ -72,6 +72,13 @@ body {
 .form-control,
 #genre {
     background-color: white;
+    width: 300px; 
+    font-size: 20px; 
+  
+}
+
+#startDate, #endDate {
+    font-size: 20px; 
 }
 
 .radioLabel {
@@ -130,9 +137,9 @@ body {
     display: flex;
     align-items: center;
     opacity: 95%;
-    margin-left: 35%; 
-    width: 25%; 
-    font-size: 20px; 
+    margin-left: 30%; 
+    width: 35%; 
+    font-size: 25px; 
 
 }
 input[type=radio],

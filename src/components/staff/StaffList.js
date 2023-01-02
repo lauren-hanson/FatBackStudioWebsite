@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import "./Staff.css"
 
-export const StaffList = ({ id }) => {
+export const StaffList = () => {
 
 
     const [staffMembers, setStaff] = useState([])
@@ -79,7 +79,7 @@ export const StaffList = ({ id }) => {
             <h2 className="staffHeader">Our Staff</h2>
 
             {
-                fatbackUserObject.staff
+                fatbackUserObject.admin
                     ?
                     <div className="button">
                         <button
@@ -106,10 +106,11 @@ export const StaffList = ({ id }) => {
                                 </div>
 
                                 {
-                                    fatbackUserObject.staff ?
+                                    fatbackUserObject.admin ?
                                         <><br></br>
                                             <div className="email">{staff?.user?.email}</div> <br></br>
                                             <div className="startDate">Start Date: {staff.startDate}</div><br></br>
+                                            
                                             <button
                                                 onClick={(clickEvent) => { editStaff(clickEvent, staff.id) }}
                                                 className="editStaffButton">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import { AcceptDenyContainer } from "./AcceptDenyContainer.js"
+import { Title } from '../home/Title'
 import "./Requests.css"
 
 
@@ -26,7 +27,7 @@ export const Requests = () => {
 
 
     return (<>
-
+    <Title /> 
         <div className="myrequests">
             {requests.length ?
                 <div key={`requests--${requests.id}`}>
@@ -78,7 +79,7 @@ export const Requests = () => {
                                         <br></br>
                                         
                                     <div className="statusContainer ">
-                                        <AcceptDenyContainer requests={request} id={request.id} />
+                                        <AcceptDenyContainer request={request} id={request.id} />
                                     </div>
                                 </div>
 
