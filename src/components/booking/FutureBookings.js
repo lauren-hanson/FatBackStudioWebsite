@@ -20,28 +20,30 @@ export const FutureBookings = () => {
     <>
       <div className="myrequests">
         <h2 className="futureBookingsHeader">Future Bookings</h2>
-        <div className="requestBox">
-          {requests.map(request => {
-            return (<>
-              <div className="acceptedBookingInfo" key={`requests--${request.id}`}>
-                <div>Band Name: {request.bandName}</div>
-                <div>Phone Number: {request.phoneNumber}</div>
-                <div>Email: {request?.user?.email}</div>
-                <div>Start Date: {request.startDate}</div>
-                <div>End Date: {request.endDate}</div>
+        {requests.length ?
+          <div className="requestBox">
+            {requests.map(request => {
+              return (<>
+                <div className="acceptedBookingInfo" key={`requests--${request.id}`}>
+                  <div>Band Name: {request.bandName}</div>
+                  <div>Phone Number: {request.phoneNumber}</div>
+                  <div>Email: {request?.user?.email}</div>
+                  <div>Start Date: {request.startDate}</div>
+                  <div>End Date: {request.endDate}</div>
 
-                <div></div>
-              </div>
-            </>)
-          })}
+                  <div></div>
+                </div>
+              </>)
+            })}
 
-        </div>
+          </div> : <div className="noBookingStatus">FatBack has no future bookings.</div>
+        }
       </div>
-   
-        <div className="link">
-          <Link to="/requests" id="link">Back to Requests</Link>
-        </div>
-      </>
+
+      <div className="link">
+        <Link to="/requests" id="futurebookinglink">Back to Requests</Link>
+      </div>
+    </>
   )
 
 }

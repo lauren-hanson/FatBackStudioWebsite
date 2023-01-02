@@ -11,7 +11,7 @@
     padding: 20px;
     margin: 20px;
     font-size: 15px;
-    color: #2e2029;
+    color: #17070b;
 
 }
 
@@ -30,10 +30,10 @@
 
 }
 
-.requestInfo:hover {
+/* .requestInfo:hover {
     transform: scale(1.2);
     z-index: 1; 
-}
+} */
 
 .acceptDenyButtonContainer { 
     display: flex; 

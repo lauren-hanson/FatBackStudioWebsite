@@ -77,7 +77,7 @@ export const Requests = () => {
                                         <br></br>
                                         <br></br>
                                         
-                                    <div className="statusContainer">
+                                    <div className="statusContainer ">
                                         <AcceptDenyContainer requests={request} id={request.id} />
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export const Requests = () => {
             onClick={() => {
                 navigate("/futurebookings")
             }}>
-            <p className="futureBookingText">See your <Link to="/futurebookings" id="futurebookinglink">future bookings </Link></p>
+            <p className="futureBookingText">See your <Link to="/futurebookings" id="link">future bookings </Link></p>
         </div>
     </>)
 }

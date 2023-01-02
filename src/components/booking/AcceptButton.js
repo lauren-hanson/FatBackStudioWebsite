@@ -3,7 +3,7 @@ import "./Requests.css"
 
 export const AcceptButton = ({ id }) => {
 
-    const [requests, setRequest] = useState([])
+    const [requests, setAcceptedRequest] = useState([])
     const [refresh, setRefresh] = useState(true)
 
     useEffect(
@@ -11,9 +11,9 @@ export const AcceptButton = ({ id }) => {
             fetch(`http://localhost:8088/requests?_expand=genre&_sort=startDate`)
                 .then(response => response.json())
                 .then((requestInfo) => {
-                    setRequest(requestInfo)
+                    setAcceptedRequest(requestInfo)
                 })
-        }, [, refresh]
+        }, [ , refresh]
     )
 
     const acceptRequestButton = (event) => {
@@ -21,7 +21,7 @@ export const AcceptButton = ({ id }) => {
 
         const requestAcceptStatusForAPI = {
             isAccepted: true,
-            isPending: false,
+            isPending: false
         }
 
         fetch(`http://localhost:8088/requests/${id}`, {

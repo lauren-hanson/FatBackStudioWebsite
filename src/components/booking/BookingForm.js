@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { BookingStatus } from "./BookingStatus.js"
 import "./BookingForm.css"
 
+
 export const BookingForm = () => {
 
     const localFatBackUser = localStorage.getItem("fatback_user")

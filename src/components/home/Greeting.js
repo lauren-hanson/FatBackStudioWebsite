@@ -6,7 +6,7 @@ import "./About.css"
 export const Greeting = () => {
 
     const [users, setUsers] = useState([])
- 
+
     // const [requests, setRequests] = useState([])
     // const [pendingRequests, setPendingRequests] = useState([])
 
@@ -71,9 +71,10 @@ export const Greeting = () => {
 
 
     if (fatbackUserObject.admin) {
-        return <AdminGreeting users={users}/>
+        return <AdminGreeting users={users} />
+        //return <ModalWindow users={users} />
     } else if (fatbackUserObject.staff) {
-        return <StaffGreeting users={users}/>
+        return <StaffGreeting users={users} />
     }
 
 }
