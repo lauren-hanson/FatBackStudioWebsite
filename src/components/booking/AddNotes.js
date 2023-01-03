@@ -4,6 +4,7 @@ import "./Requests.css"
 
 export const AddNotes = ({ id }) => {
 
+    //const {requestId} = useParams()
     const [notes, setNotes] = useState({
     })
 

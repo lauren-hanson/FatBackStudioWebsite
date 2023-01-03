@@ -1,6 +1,5 @@
 import { Greeting } from "./Greeting"
 
-
 import "./About.css"
 
 export const Home = () => {

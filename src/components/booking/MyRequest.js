@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import { Title } from '../home/Title'
 import "./BookingForm"
 
 
@@ -49,7 +50,7 @@ export const MyRequest = () => {
                     .then(() => {
                         getAllRequests()
                     })
-                    
+
                 // .then(() => {
                 //     setTimeout(() => navigate("/"), 3000);
                 // })
@@ -60,6 +61,7 @@ export const MyRequest = () => {
 
     return (
         <div >
+            <Title/>
 
 
             {requests.length ?

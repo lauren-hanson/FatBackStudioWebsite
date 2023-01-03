@@ -9,7 +9,7 @@ import { AddGalleryImage } from "../gallery/AddGalleryImage"
 import { ArtistContainer } from "../artists/ArtistContainer"
 import { AddArtist } from "../artists/AddArtist.js"
 import { ArtistEdit } from "../artists/ArtistEdit.js"
-import { FutureBookings } from "../booking/FutureBookings"
+import { Schedule } from "../booking/Schedule"
 import { Home } from "../home/Home.js"
 import "./ApplicationViews.css"
 
@@ -23,7 +23,7 @@ export const StaffViews = () => {
             <Route path="/" element={
                 <div className="views">
                     <Outlet />
-                    
+
                 </div>
             }>
                 <Route path="/" element={<Home />} />
@@ -38,8 +38,8 @@ export const StaffViews = () => {
                 <Route path="artists/:artistId/edit" element={<ArtistEdit />} />
                 <Route path="booking" element={<BookingForm />} />
                 <Route path="requests" element={<Requests />} />
-                <Route path="futurebookings" element={<FutureBookings />} />
-              
+                <Route path="schedule/:requestId" element={<Schedule />} />
+
             </Route>
         </Routes>
     )

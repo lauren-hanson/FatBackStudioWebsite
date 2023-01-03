@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react"
 import "./Requests.css"
 
-export const DenyButton = ({ id }) => {
+export const DenyButton = ({ id, refresh, setRefresh }) => {
 
     const [requests, setDeniedRequest] = useState([])
-    const [refresh, setRefresh] = useState(true)
+    //const [refresh, setRefresh] = useState(true)
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/requests?_expand=genre&_sort=startDate`)
+            fetch(`http://localhost:8088/requests?_expand=genre`)
                 .then(response => response.json())
                 .then((requestInfo) => {
                     setDeniedRequest(requestInfo)
                 })
-        }, [ , refresh]
+        }, [, refresh]
     )
 
     const denyRequest = (event) => {
@@ -31,7 +31,7 @@ export const DenyButton = ({ id }) => {
             },
             body: JSON.stringify(requestDenyStatusForAPI)
         })
-            .then(response => response.json())
+            //.then(response => response.json())
 
             .then(
                 setRefresh(!refresh)

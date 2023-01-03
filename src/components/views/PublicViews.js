@@ -20,8 +20,8 @@ export const PublicViews = () => {
                 </div>
             }>
 
-                <Route path="/" element={<PublicHome />} />
                 <Route path="*" element={""} />
+                <Route path="/" element={<PublicHome />} />
                 <Route path="aboutFatBack" element={<PublicAbout />} />
                 <Route path="register" element={<Register />} />
                 <Route path="/gallery" element={<PublicGalleryView />} />

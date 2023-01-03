@@ -16,10 +16,10 @@ export const ClientViews = () => {
 
     return (
         <Routes>
-            <Route path="/" element={
+            <Route path="" element={
                 <div className="views ">
                     <Outlet />
-                    <Home />
+
                 </div>
             }>
 

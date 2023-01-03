@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Title } from '../home/Title'
+import { AddNotes } from "./AddNotes"
 import "./BookingForm.css"
 
-export const FutureBookings = () => {
+export const Schedule = ({id}) => {
 
   const [requests, setRequest] = useState([])
 
@@ -19,7 +20,7 @@ export const FutureBookings = () => {
 
   return (
     <>
-    <Title/>
+      <Title />
       <div className="myrequests">
         <h2 className="futureBookingsHeader">Future Bookings</h2>
         {requests.length ?
@@ -33,7 +34,42 @@ export const FutureBookings = () => {
                   <div>Start Date: {request.startDate}</div>
                   <div>End Date: {request.endDate}</div>
 
-                  <div></div>
+                  <div className="radioReview">Musicians:
+                    {request.musicianRequest === true ?
+                      <div>Yes</div> :
+                      <div>No</div>
+                    }
+
+                  </div>
+
+                  <div className="radioReview">Session Musicians:
+                    {request.sessionMusicians === true ?
+                      <div>Yes</div> :
+                      <div>No</div>
+                    }
+
+                  </div>
+
+                  <div className="radioReview">Photos:
+                    {request.photoRequest === true ?
+                      <div>Yes</div> :
+                      <div>No</div>
+                    }
+
+                  </div>
+
+                  <div className="radioReview">Video Request:
+                    {request.videoRequest === true ?
+                      <div>Yes</div> :
+                      <div>No</div>
+                    }
+
+                  </div>
+
+                  <div>
+                  
+                  <AddNotes requests={requests} id={id}/>
+                  </div>
                 </div>
               </>)
             })}

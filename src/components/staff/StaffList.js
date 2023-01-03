@@ -109,7 +109,7 @@ export const StaffList = () => {
                                     fatbackUserObject.admin ?
                                         <><br></br>
                                             <div className="email">{staff?.user?.email}</div> <br></br>
-                                            <div className="startDate">Start Date: {staff.startDate}</div><br></br>
+                                            <div className="startDate">{staff?.user?.phoneNumber}</div><br></br>
                                             
                                             <button
                                                 onClick={(clickEvent) => { editStaff(clickEvent, staff.id) }}
