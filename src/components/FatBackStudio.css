@@ -1,5 +1,7 @@
 /* Import the google web fonts you want to use */
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+/* @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One"); */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /*Typography
 --------------------------------------------------------------*/
@@ -10,7 +12,8 @@ select,
 textarea {
   background: #e9dddb;
   color: #17070b;
-  font-family: 'Source Code Pro', monospace;
+  /* font-family: 'Source Code Pro', monospace; */
+  font-family: 'Roboto Slab', serif;
   font-size: 14px;
   line-height: 1.5;
   /* background-color: #101010; */
@@ -22,9 +25,11 @@ textarea {
 } */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Source Code Pro', monospace; */
   letter-spacing: 2px;
   font-weight: lighter; 
+  
 }
 
 p {

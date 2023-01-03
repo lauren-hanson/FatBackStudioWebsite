@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
-import { AdminGreeting } from "./AdminGreeting"
-import { StaffGreeting } from "./StaffGreeting"
-import { ClientGreeting } from "./ClientGreeting"
+//import { AdminGreeting } from "./AdminGreeting"
+//import { StaffGreeting } from "./StaffGreeting"
+//import { ClientGreeting } from "./ClientGreeting"
+import {AdminModal} from "./AdminModal"
+import {StaffModal} from "./StaffModal"
+import {ClientModal} from "./ClientModal"
 import "./About.css"
 
 export const Greeting = () => {
@@ -18,9 +21,25 @@ export const Greeting = () => {
         fetch(`http://localhost:8088/users?isStaff=true`)
             .then(response => response.json())
             .then(userInfo => {
-                setUsers(userInfo)
+                setUsers(userInfo[0])
             })
     }, [])
+
+    if (fatbackUserObject.admin) {
+        return <AdminModal users={users} />
+    } else if (fatbackUserObject.staff) {
+        return <StaffModal users={users} />
+    } else if (!fatbackUserObject.staff) {
+        return <ClientModal />
+    }
+
+    // if (fatbackUserObject.admin) {
+    //     return <AdminGreeting users={users} />
+    // } else if (fatbackUserObject.staff) {
+    //     return <StaffGreeting users={users} />
+    // } else if (!fatbackUserObject.staff) {
+    //     return <ClientGreeting />
+    // }
 
     // useEffect(() => {
     //     fetch(`http://localhost:8088/requests`)
@@ -69,14 +88,6 @@ export const Greeting = () => {
     // },
     //     [])
 
-
-
-    if (fatbackUserObject.admin) {
-        return <AdminGreeting users={users} />
-    } else if (fatbackUserObject.staff) {
-        return <StaffGreeting users={users} />
-    } else if (!fatbackUserObject.staff) {
-        return <ClientGreeting />
-    }
+   
 
 }

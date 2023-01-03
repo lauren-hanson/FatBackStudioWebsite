@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
 .title_container {
     position: relative;
     text-align: center;
@@ -11,7 +13,6 @@
     background-image: url("https://res.cloudinary.com/dgwi6xvfl/image/upload/v1671727628/FatBack/backgroundimage_tj7vmd.jpg");
     width: 100%;
     z-index: -1;
-    
 
 }
 
@@ -23,7 +24,6 @@
 }
 
 #title-main {
-
     position: absolute;
     top: 40%;
     left: 50%;
@@ -80,10 +80,6 @@
 
 }
 
-.welcomeAlert {
-    color: #2e2029;
-    font-size: 25px;
-}
 
 /* .reserveButton {
     display: flex;
