@@ -48,7 +48,6 @@ export const AcceptButton = ({ id, refresh, setRefresh }) => {
 
     return (
         <>
-
             <button
                 onClick={(clickEvent) => {
                     acceptRequestButton(clickEvent)

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-export const StaffModal = ({ users }) => {
+export const StaffModal = ({ users, currentUser }) => {
     const [modal, setModal] = useState(false)
 
     // const [timeout, setTimeout] = useState(false)
 
     const toggleModal = () => {
         setModal(!modal)
-        setTimeout(1000)
+        // setTimeout(1000)
     }
 
     // const toggleModal = () => {
@@ -31,7 +31,7 @@ export const StaffModal = ({ users }) => {
             {modal && (
                 <div className="modal_window">
                     <div onClick={toggleModal}></div>
-                    <h2 className="modal_titlebar">Hi {users.fullName}</h2>
+                    <h2 className="modal_titlebar">Welcome FatBack Fam!</h2>
                     {/* <p className="modal_content">
                         You have new pending requests.
                     </p> */}

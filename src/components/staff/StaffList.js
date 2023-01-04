@@ -108,15 +108,18 @@ export const StaffList = () => {
                                 {
                                     fatbackUserObject.admin ?
                                         <><br></br>
-                                            <div className="email">{staff?.user?.email}</div> <br></br>
-                                            <div className="startDate">{staff?.user?.phoneNumber}</div><br></br>
-                                            
-                                            <button
-                                                onClick={(clickEvent) => { editStaff(clickEvent, staff.id) }}
-                                                className="editStaffButton">
-                                                Edit
-                                            </button> </> : ""
-                                }
+                                            <details>
+                                                <summary>Contact Information</summary>
+                                                <div className="email">{staff?.user?.email}</div> <br></br>
+                                                <div className="startDate">{staff?.user?.phoneNumber}</div><br></br>
+                                                <button
+                                                    onClick={(clickEvent) => { editStaff(clickEvent, staff.id) }}
+                                                    className="editStaffButton">
+                                                    Edit
+                                                </button></details></> : ""
+                                                
+                                    }
+                                        
                             </div>
 
                         </div>

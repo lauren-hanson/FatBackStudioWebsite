@@ -11,6 +11,7 @@ import { AddArtist } from "../artists/AddArtist.js"
 import { ArtistEdit } from "../artists/ArtistEdit.js"
 import { Schedule } from "../booking/Schedule"
 import { Home } from "../home/Home.js"
+import { PublicHome } from "../home/PublicHome"
 import "./ApplicationViews.css"
 
 
@@ -26,8 +27,10 @@ export const StaffViews = () => {
 
                 </div>
             }>
+
+                <Route path="*" element={<PublicHome />} />
                 <Route path="/" element={<Home />} />
-                <Route path="*" element={""} />
+                {/* <Route path="*" element={""} /> */}
                 <Route path="aboutFatBack" element={<About />} />
                 <Route path="aboutFatBack/addstaff" element={<AddStaff />} />
                 <Route path="aboutFatBack/:staffId/edit" element={<StaffEdit />} />
@@ -38,7 +41,7 @@ export const StaffViews = () => {
                 <Route path="artists/:artistId/edit" element={<ArtistEdit />} />
                 <Route path="booking" element={<BookingForm />} />
                 <Route path="requests" element={<Requests />} />
-                <Route path="schedule/:requestId" element={<Schedule />} />
+                <Route path="schedule" element={<Schedule />} />
 
             </Route>
         </Routes>

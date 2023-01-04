@@ -1,4 +1,3 @@
-
 import { ClientViews } from "../views/ClientViews"
 import { StaffViews } from "../views/StaffViews"
 import { PublicViews } from "../views/PublicViews"
@@ -25,7 +24,6 @@ export const ApplicationViews = () => {
             <ClientViews />
         </>
     }
-
 }
 
 

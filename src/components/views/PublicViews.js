@@ -13,19 +13,19 @@ export const PublicViews = () => {
     return (
         <Routes>
 
-            <Route path="/" element={
+            <Route path="*" element={
                 <div className="views">
                     <Outlet />
                     <ReserveButton /><br></br>
                 </div>
             }>
 
-                <Route path="*" element={""} />
-                <Route path="/" element={<PublicHome />} />
+                <Route path="*" element={<PublicHome />} />
+                {/* <Route path="/" element={""} /> */}
                 <Route path="aboutFatBack" element={<PublicAbout />} />
                 <Route path="register" element={<Register />} />
-                <Route path="/gallery" element={<PublicGalleryView />} />
-                <Route path="/artists" element={<ArtistListPublic />} />
+                <Route path="gallery" element={<PublicGalleryView />} />
+                <Route path="artists" element={<ArtistListPublic />} />
             </Route>
         </Routes>
     )

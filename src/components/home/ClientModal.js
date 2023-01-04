@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import "./Modal.css";
 
-export const ClientModal = ({user}) => {
+export const ClientModal = () => {
+
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -16,21 +17,16 @@ export const ClientModal = ({user}) => {
 
     return (
         <>
-           <h1 id="title-main" onClick={toggleModal} className="btn-modal">FatBack Studio </h1>
-
+            <h1 id="title-main" onClick={toggleModal} className="btn-modal">FatBack Studio</h1>
             {modal && (
                 <div className="modal_window">
                     <div onClick={toggleModal}></div>
-                    <h2 className="modal_titlebar">Welcome {user.fullName} to the FatBack Fam</h2>
-                    {/* <p className="modal_content">
-                        You have new pending requests.
-                    </p> */}
+                    <h2 className="modal_titlebar">Welcome to the Fatback Fam!</h2>
                     <button className="modal_close" onClick={toggleModal}>
                         CLOSE
                     </button>
                 </div>
             )}
-
         </>
     )
 }

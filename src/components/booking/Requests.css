@@ -94,3 +94,10 @@
     color: #17070b;
     font-size: 25px;
 }
+
+#textNotes { 
+    margin-top: 50px; 
+    width: 300px; 
+    height: 150px; 
+    font-size: 18px; 
+}

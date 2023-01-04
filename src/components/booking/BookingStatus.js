@@ -8,9 +8,9 @@ export const BookingStatus = ({ requests }) => {
     if (requests.isPending) {
         return <PendingBooking />
     } else if (requests.isAccepted) {
-        return <AcceptBooking />
+        return <AcceptBooking requests={requests}/>
     } else if (requests.isDenied) {
-        return <DenyBooking />
+        return <DenyBooking requests={requests}/>
     }
 
 }

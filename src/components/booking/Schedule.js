@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Title } from '../home/Title'
-import { AddNotes } from "./AddNotes"
+import { AddNotesAccept } from "./AddNotesAccept"
 import "./BookingForm.css"
 
 export const Schedule = ({id}) => {
@@ -68,7 +68,7 @@ export const Schedule = ({id}) => {
 
                   <div>
                   
-                  <AddNotes requests={requests} id={id}/>
+                  <AddNotesAccept requests={requests} id={request.id}/>
                   </div>
                 </div>
               </>)

@@ -33,7 +33,7 @@ export const ClientNavBar = () => {
                         <Link className="navbar_link" to="" onClick={() => {
                             refreshPage()
                             localStorage.removeItem("fatback_user")
-                            navigate("/")
+                            navigate("*", {replace: true})
                         }}>Logout</Link>
                     </li>
                     : ""

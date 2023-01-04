@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-export const AdminModal = ({users}) => {
+export const AdminModal = ({users, pendingRequests}) => {
   const [modal, setModal] = useState(false)
   //const [timeout, setTimeout] = useState(true)
 
@@ -24,9 +24,9 @@ export const AdminModal = ({users}) => {
       {modal && (
         <div className="modal_window">
           <div onClick={toggleModal}></div>
-            <h2 className="modal_titlebar">Welcome {users.fullName}</h2>
+            <h2 className="modal_titlebar">Welcome {users?.user?.fullName}</h2>
             <p className="modal_content">
-              You have new pending requests.
+              You have {pendingRequests.length} new pending requests.
             </p>
             <button className="modal_close" onClick={toggleModal}>
               CLOSE

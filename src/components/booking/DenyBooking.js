@@ -1,14 +1,12 @@
+import { useNavigate, Link } from "react-router-dom"
 
-export const DenyBooking = () => {
+export const DenyBooking = ({requests}) => {
 
-     // .then(() => {
-                //     setTimeout(() => navigate("/"), 3000);
-                // })
-                
     return (
         <>
-            <div className="statusUpdate">Your request has been denied.</div>
+            <div className="statusUpdate">Your request has been denied. <br></br>{requests?.notes}</div>
             
+            <p className="futureBookingText"><Link to="/reserve" id="link">Click here</Link> to book.</p>
         </>
     )
 }
