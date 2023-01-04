@@ -128,7 +128,6 @@ export const AddNotesDeny = ({ id }) => {
                     }}>
                     Save Notes
                 </button>
-               
             </form>
         </div>
 

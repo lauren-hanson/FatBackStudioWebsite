@@ -4,6 +4,9 @@ import "./NavBar.css"
 export const StaffNavBar = () => {
     const navigate = useNavigate()
 
+    const localFatBackUser = localStorage.getItem("fatback_user")
+    const fatbackUserObject = JSON.parse(localFatBackUser)
+
     function refreshPage() {
         window.location.reload(false)
     }
@@ -15,19 +18,21 @@ export const StaffNavBar = () => {
                 <Link className="navbar_link" to="/">Home</Link>
             </li>
 
-
-            <li className="navbar_item active">
-                <Link className="navbar_link" to="/requests">Requests</Link>
-            </li>
-
             <li className="navbar_item active">
                 <Link className="navbar_link" to="/schedule">Schedule</Link>
             </li>
 
+            {fatbackUserObject.admin ?
+                <li className="navbar_item active">
+                    <Link className="navbar_link" to="/requests">Requests</Link>
+                </li> : "" 
+            }
+
+
             {/* <li className="navbar_item active">
                 <Link className="navbar_link" to="/calendar">Calendar</Link>
             </li> */}
- 
+
             <li className="navbar_item active">
                 <Link className="navbar_link" to="/aboutFatBack">About</Link>
             </li>

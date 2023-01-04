@@ -111,7 +111,8 @@ body {
 .deleteRequestButton,
 .saveEditButton,
 .reviewRequestButton,
-.reviewFutureBookings {
+.reviewFutureBookings,
+.requestResetButton  {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +122,13 @@ body {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+    
 
+}
+
+
+.requestResetButton { 
+    margin-left: 45%; 
 }
 
 .saveEditButton {

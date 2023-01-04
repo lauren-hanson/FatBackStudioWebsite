@@ -10,6 +10,7 @@ export const BookingForm = () => {
     const localFatBackUser = localStorage.getItem("fatback_user")
     const fatbackUserObject = JSON.parse(localFatBackUser)
 
+    const [refresh, setRefresh] = useState(true)
     const [genres, setGenres] = useState([])
     const [requests, setRequests] = useState([])
 
@@ -58,7 +59,7 @@ export const BookingForm = () => {
                 .then((requestInfo) => {
                     setRequests(requestInfo[0])
                 })
-        }, []
+        }, [, refresh]
     )
 
     useEffect(
@@ -128,7 +129,7 @@ export const BookingForm = () => {
         <>
         <Title/> 
             {requests ?
-                <BookingStatus requests={requests} /> :
+                <BookingStatus requests={requests} setRefresh={setRefresh} refresh={refresh}/> :
                 < div className="bookingForm" >
                     <h2 className="bookingHeader">Booking Form</h2>
                     <form>

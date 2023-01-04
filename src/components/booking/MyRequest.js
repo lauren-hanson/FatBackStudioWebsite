@@ -47,9 +47,21 @@ export const MyRequest = () => {
                 fetch(`http://localhost:8088/requests/${id}`, {
                     method: "DELETE"
                 })
+                    .then(
+                        window.alert("Your request has been deleted.")
+                    )
                     .then(() => {
                         getAllRequests()
                     })
+
+                    .then(
+                        navigate("/home")
+                    )
+
+
+
+
+
 
                 // .then(() => {
                 //     setTimeout(() => navigate("/"), 3000);
@@ -61,7 +73,7 @@ export const MyRequest = () => {
 
     return (
         <div >
-            <Title/>
+            <Title />
 
 
             {requests.length ?

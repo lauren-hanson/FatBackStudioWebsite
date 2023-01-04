@@ -4,7 +4,10 @@ import { Title } from '../home/Title'
 import { AddNotesAccept } from "./AddNotesAccept"
 import "./BookingForm.css"
 
-export const Schedule = ({id}) => {
+export const Schedule = ({ id }) => {
+
+  const localFatBackUser = localStorage.getItem("fatback_user")
+  const fatbackUserObject = JSON.parse(localFatBackUser)
 
   const [requests, setRequest] = useState([])
 
@@ -67,8 +70,9 @@ export const Schedule = ({id}) => {
                   </div>
 
                   <div>
-                  
-                  <AddNotesAccept requests={requests} id={request.id}/>
+                    {fatbackUserObject.admin ?
+                      <AddNotesAccept requests={requests} id={request.id} /> : ""
+                    }
                   </div>
                 </div>
               </>)
@@ -78,9 +82,11 @@ export const Schedule = ({id}) => {
         }
       </div>
 
-      <div className="link">
-        <Link to="/requests" id="futurebookinglink">Back to Requests</Link>
-      </div>
+      {requests.length ?
+        <div className="link">
+          <Link to="/requests" id="futurebookinglink">Back to Requests</Link>
+        </div> : ""
+      }
     </>
   )
 

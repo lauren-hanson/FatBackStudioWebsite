@@ -1,12 +1,45 @@
-import { useNavigate, Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import "./Requests.css"
 
-export const DenyBooking = ({requests}) => {
+export const DenyBooking = ({ requests, refresh, setRefresh }) => {
+
+   
+    const navigate = useNavigate()
+
+    const requestReset = () => {
+        //if (!fatbackUserObject.staff) 
+        return <button
+            onClick={() => {
+                fetch(`http://localhost:8088/requests/${requests.id}`, {
+                    method: "DELETE"
+                })
+
+                    // .then(() => {
+                    //     setTimeout(() => navigate("/reserve"), 3000);
+                    // })
+
+
+                    .then(
+                        setRefresh(!refresh)
+                    )
+
+                    .then(
+                        navigate("/reserve")
+                    )
+
+
+            }}
+            className="requestResetButton">
+            Try again?</button>
+    }
+
 
     return (
         <>
             <div className="statusUpdate">Your request has been denied. <br></br>{requests?.notes}</div>
-            
-            <p className="futureBookingText"><Link to="/reserve" id="link">Click here</Link> to book.</p>
+
+            {requestReset()}
         </>
     )
 }
