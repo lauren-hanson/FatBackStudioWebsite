@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import { Title } from '../home/Title'
 import "./Artist.css"
 
 
@@ -32,17 +33,17 @@ export const ArtistList = ({ searchTermState }) => {
         [artists]
     )
 
-    useEffect(
-        () => {
-            const searchedArtist = artists.filter(artist => {
-                return artist.artistName.toLowerCase().startsWith(searchTermState.toLowerCase())
-            }
-            )
-            setFilteredArtists(searchedArtist)
-        },
-        [searchTermState]
+    // useEffect(
+    //     () => {
+    //         const searchedArtist = artists.filter(artist => {
+    //             return artist.artistName.toLowerCase().startsWith(searchTermState.toLowerCase())
+    //         }
+    //         )
+    //         setFilteredArtists(searchedArtist)
+    //     },
+    //     [searchTermState]
 
-    )
+    // )
 
     const addArtistButton = (event) => {
         event.preventDefault()
@@ -79,11 +80,12 @@ export const ArtistList = ({ searchTermState }) => {
 
     return (
         <>
+         <Title />
             < div className="artistPage" >
                 <h2 className="artistHeader">Artists</h2>
 
                 {
-                    fatbackUserObject.staff
+                    fatbackUserObject.admin
                         ?
                         <div className="button">
                             <button
@@ -104,7 +106,7 @@ export const ArtistList = ({ searchTermState }) => {
                             return <div className="artist" key={`artist--${artist.id}`}>
                                 <img className="artistImg" src={artist.imageURL} />
                                 <div>{artist.artistName}</div><br></br>
-                                {fatbackUserObject.staff ? <><div className="artistInfo">{artist.notes}</div><br></br>
+                                {fatbackUserObject.admin ? <><div className="artistInfo">{artist.notes}</div><br></br>
                                     <div>Recording Date: {artist.startDate} - {artist.endDate}</div>
                                     <div className="editDeleteButtonContainer">
                                         <button className="editButton"

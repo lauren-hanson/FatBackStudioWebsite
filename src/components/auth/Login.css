@@ -21,13 +21,15 @@ fieldset {
     background-size: 100%; 
     padding-right: 0; 
     color: #e9dddb;
+    margin-top: 150px; 
 
 }
 
 
 .container--login, .container--register {
     text-align: center;
-    margin-top: 200px; 
+    padding: 75px; 
+   
     
 }
 
@@ -40,7 +42,8 @@ fieldset {
 
 .form--register { 
     width: 50%; 
-    margin: 50px; 
+    margin-top: 50px; 
+    
 }
 
 .form--login > fieldset > input[type="email"] {
@@ -88,7 +91,6 @@ fieldset {
 .inputEmail { 
     font-size: 25px; 
     color: #e9dddb;
-   
 }
 
 #submitButton, #registerButton { 
@@ -107,12 +109,8 @@ fieldset {
     margin-left: auto; 
 }
 
-label { 
+label, #loginlink { 
     color: #e9dddb;
-}
-
-#link{
-    color: #17070b;
 }
 
 .button--close {
@@ -120,3 +118,6 @@ label {
     bottom: -2rem;
 }
 
+#fullName { 
+    width: 75%; 
+}

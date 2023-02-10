@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./Staff.css"
 
-export const StaffList = ({ searchTermState }) => {
+export const StaffList = () => {
 
 
     const [staffMembers, setStaff] = useState([])
@@ -18,7 +18,7 @@ export const StaffList = ({ searchTermState }) => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/staff?&_expand=user&_sort=fullName`)
+            fetch(`http://localhost:8088/staff?&_expand=user&_expand=title&_sort=fullName`)
                 .then(response => response.json())
                 .then((staffArray) => {
                     setStaff(staffArray)
@@ -65,6 +65,13 @@ export const StaffList = ({ searchTermState }) => {
 
     }
 
+    const editStaff = (event, staff) => {
+        event.preventDefault()
+
+        navigate(`/aboutFatBack/${staff}/edit`)
+
+    }
+
 
     return (
 
@@ -72,7 +79,7 @@ export const StaffList = ({ searchTermState }) => {
             <h2 className="staffHeader">Our Staff</h2>
 
             {
-                fatbackUserObject.isAdmin=true
+                fatbackUserObject.admin
                     ?
                     <div className="button">
                         <button
@@ -80,9 +87,8 @@ export const StaffList = ({ searchTermState }) => {
                             className="addNewStaffButton">
                             Add New Staff Member
                         </button>
-
-
-                    </div> :
+                    </div>
+                    :
                     <></>
             }
 
@@ -93,21 +99,38 @@ export const StaffList = ({ searchTermState }) => {
 
                             <img className="staffImg" src={staff.imageURL} />
                             <div className="staffInfo">
-                                <div className="fullName"> 
-                                {staff?.user?.fullName}</div>
-                                {staffTitles.map(staffTitle => {
-                                    if (staffTitle.id === staff.titleId) {
-                                        return <div className="title">{staffTitle.title.type}</div>
+                                <div className="fullName">
+                                    {staff?.user?.fullName}</div>
+                                <div className="title">
+                                    {staff?.title?.type}
+                                </div>
 
+                                {
+                                    fatbackUserObject.admin ?
+                                        <><br></br>
+                                            <details>
+                                                <summary>Contact Information</summary>
+                                                <div className="email">{staff?.user?.email}</div> <br></br>
+                                                <div className="startDate">{staff?.user?.phoneNumber}</div><br></br>
+                                                <button
+                                                    onClick={(clickEvent) => { editStaff(clickEvent, staff.id) }}
+                                                    className="editStaffButton">
+                                                    Edit
+                                                </button></details></> : ""
+                                                
                                     }
-
-                                })}
+                                        
                             </div>
 
                         </div>
                     })
-              
+
                 }
+                {staffTitles.map(title => {
+                    if (title.id === title.titleId) {
+                        return <div className="title">{title.type}</div>
+                    }
+                })}
 
             </div>
         </div>

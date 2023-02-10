@@ -21,6 +21,17 @@
 
 }
 
+.addImagePage {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid #2e2029;
+    padding-bottom: 20px; 
+}
+
 .galleryImg {
     display: flex;
     flex-flow: column nowrap;
@@ -35,10 +46,9 @@
 }
 
 .deleteImageButton {
-    width: 100px;
+    width: 15%; 
+    margin-left: 45%; 
     background-color: white;
-    padding: 10px 5px;
-    margin-left: auto; 
 
 }
 

@@ -10,14 +10,13 @@
     color: #e9dddb; 
     opacity: 90%; 
     height: 100px; 
-    width: 98.5%;    
+    width: 98.9%;  
+    margin-bottom: 20px;   
 }
-
-
 
 .navbar_link { 
     color: #d2d3ce;
-    font-size: 32px; 
+    font-size: 26px; 
     display: flex; 
     flex-flow: row wrap; 
     align-content: center; 

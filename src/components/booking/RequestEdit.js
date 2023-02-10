@@ -123,7 +123,7 @@ export const RequestEdit = () => {
                         <label htmlFor="genre" className="label">Choose a genre:</label>
                         <select id="genre"
                             required
-                            value={editRequests?.genres?.type}
+                            value={editRequests?.genreId}
                             onChange={
                                 (event) => {
                                     const copy = { ...editRequests }

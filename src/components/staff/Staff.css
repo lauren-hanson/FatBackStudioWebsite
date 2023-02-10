@@ -1,6 +1,7 @@
 .staffPage {
     margin: 50px;
     color: #2e2029;
+    border: 5px solid #2e2029;
 }
 
 .staffHeader,
@@ -26,7 +27,12 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly; 
- 
+    align-items: center; 
+    align-content: center; 
+    margin-bottom: 20px; 
+    padding: 20px; 
+    margin: 20px 0px; 
+    width: 350px; 
 
 }
 
@@ -40,11 +46,15 @@
 }
 
 .fullName {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .title {
-    font-size: 15px;
+    font-size: 22px;
+}
+
+.startDate, .email { 
+    font-size: 20px
 }
 
 #title { 
@@ -61,7 +71,6 @@
     align-items: center;
     align-content: center;
     padding: 20px; 
-     
 }
 
 #isAdmin { 
@@ -69,9 +78,8 @@
 }
 
 .staffImg {
-
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     margin: 1rem;
     box-shadow: 1px 1px 1px #05030A;
     cursor: pointer;
@@ -92,8 +100,7 @@
     border: 3px solid #17070b;
     padding: 10px;
     margin: 10px 150px; 
-   
-     
+ 
 }
 
 .dateContainer, .imageContainer { 
@@ -117,4 +124,8 @@
     background-color: white;
     padding: 20px;
     margin-left: 45%; 
+}
+
+.editStaffButton { 
+    background-color: white;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, } from "react-router-dom"
+import { Title } from '../home/Title'
 import "./Gallery.css"
 
 export const GalleryView = () => {
@@ -32,7 +33,7 @@ export const GalleryView = () => {
 
     const handleDeleteImageButton = (id) => {
 
-        if (fatbackUserObject.staff) {
+        if (fatbackUserObject.admin) {
             return <button className="deleteImageButton"
                 onClick={() => {
                     fetch(`http://localhost:8088/gallery/${id}`, {
@@ -58,36 +59,39 @@ export const GalleryView = () => {
     }
 
     return (
-        <div className="galleryPage">
-            <h3 className="galleryHeader">Gallery</h3>
+        <>
+            <Title />
+            <div className="galleryPage">
+                <h3 className="galleryHeader">Gallery</h3>
 
-            {
-                fatbackUserObject.staff
-                    ?
-                    <div className="button">
-                        <button
-                            onClick={(clickEvent) => { addPhoto(clickEvent, photos.id) }}
-                            className="addNewPhotoButton">
-                            Add New Photo
-                        </button>
-
-
-                    </div> :
-                    <></>
-            }
-
-            <div className="gallery">
                 {
-                    photos.map(photo => {
-                        return <div><img className="galleryImg" key={photo.id}
-                            src={photo.imageURL} />
-                            {handleDeleteImageButton(photo.id)}
-                        </div>
+                    fatbackUserObject.admin
+                        ?
+                        <div className="button">
+                            <button
+                                onClick={(clickEvent) => { addPhoto(clickEvent, photos.id) }}
+                                className="addNewPhotoButton">
+                                Add New Photo
+                            </button>
 
-                    }
-                    )
+
+                        </div> :
+                        <></>
                 }
+
+                <div className="gallery">
+                    {
+                        photos.map(photo => {
+                            return <div><img className="galleryImg" key={`photo--${photo.id}`}
+                                src={photo.imageURL} />
+                                {handleDeleteImageButton(photo.id)}
+                            </div>
+
+                        }
+                        )
+                    }
+                </div>
             </div>
-        </div>
+        </>
     )
 }

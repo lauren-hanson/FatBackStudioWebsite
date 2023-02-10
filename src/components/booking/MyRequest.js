@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import { Title } from '../home/Title'
 import "./BookingForm"
 
 
@@ -46,9 +47,22 @@ export const MyRequest = () => {
                 fetch(`http://localhost:8088/requests/${id}`, {
                     method: "DELETE"
                 })
+                    .then(
+                        window.alert("Your request has been deleted.")
+                    )
                     .then(() => {
                         getAllRequests()
                     })
+
+                    .then(
+                        navigate("/home")
+                    )
+
+
+
+
+
+
                 // .then(() => {
                 //     setTimeout(() => navigate("/"), 3000);
                 // })
@@ -58,7 +72,8 @@ export const MyRequest = () => {
     }
 
     return (
-        <div className="myrequest">
+        <div >
+            <Title />
 
 
             {requests.length ?
@@ -66,7 +81,7 @@ export const MyRequest = () => {
                     <h2 className="requestHeader">My Request</h2>
                     {requests.map(request => {
                         return (<>
-                            <div className="requestInfo" key={requestId}>
+                            <div id="myrequest" key={requestId}>
                                 <div>Band Name: {request?.bandName}</div>
                                 <div>Phone Number: {request?.phoneNumber}</div>
                                 <div>Start Date: {request?.startDate}</div>
@@ -76,15 +91,15 @@ export const MyRequest = () => {
 
                                 <div className="radioReview">Musicians:
                                     {request.musicianRequest === true ?
-                                        <div>Yes</div> :
-                                        <div>No</div>
+                                        <div> Yes</div> :
+                                        <div> No</div>
                                     }
 
                                 </div>
 
                                 <div className="radioReview">Session Musicians:
                                     {request.sessionMusicians === true ?
-                                        <div>Yes</div> :
+                                        <div> Yes</div> :
                                         <div> No</div>
                                     }
 
@@ -92,8 +107,8 @@ export const MyRequest = () => {
 
                                 <div className="radioReview">Photos:
                                     {request.photoRequest === true ?
-                                        <div>Yes</div> :
-                                        <div>No</div>
+                                        <div> Yes</div> :
+                                        <div> No</div>
                                     }
 
                                 </div>

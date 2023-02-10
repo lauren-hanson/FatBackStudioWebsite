@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { BookingStatus } from "./BookingStatus.js"
+import { Title } from '../home/Title'
 import "./BookingForm.css"
+
 
 export const BookingForm = () => {
 
     const localFatBackUser = localStorage.getItem("fatback_user")
     const fatbackUserObject = JSON.parse(localFatBackUser)
 
+    const [refresh, setRefresh] = useState(true)
     const [genres, setGenres] = useState([])
     const [requests, setRequests] = useState([])
- 
 
     const [request, setBookingForm] = useState({
 
@@ -57,7 +59,7 @@ export const BookingForm = () => {
                 .then((requestInfo) => {
                     setRequests(requestInfo[0])
                 })
-        }, []
+        }, [, refresh]
     )
 
     useEffect(
@@ -125,8 +127,9 @@ export const BookingForm = () => {
 
     return (
         <>
-        {requests ? 
-           <BookingStatus requests={requests}/>  :
+        <Title/> 
+            {requests ?
+                <BookingStatus requests={requests} setRefresh={setRefresh} refresh={refresh}/> :
                 < div className="bookingForm" >
                     <h2 className="bookingHeader">Booking Form</h2>
                     <form>
@@ -135,7 +138,7 @@ export const BookingForm = () => {
                             <div className="form-group">
                                 <label className="label" htmlFor="bandName">Band Name: </label>
                                 <input
-                                    required autoFocus
+                                    required 
                                     type="text"
                                     className="form-control"
                                     value={request.bandName}
@@ -156,7 +159,7 @@ export const BookingForm = () => {
                                     Phone Number:
                                 </label>
                                 <input
-                                    required autoFocus
+                                    required 
                                     type="text"
                                     className="form-control"
 
@@ -175,7 +178,7 @@ export const BookingForm = () => {
 
                         <fieldset>
                             <div className="form-group">
-                                <label className="label" htmlFor="genre">Choose a genre:</label>
+                                <label className="label genre" htmlFor="genre">Choose a genre:</label>
                                 <select id="genre" required
                                     onChange={
                                         (event) => {
@@ -207,7 +210,7 @@ export const BookingForm = () => {
                                     No. of Songs:
                                 </label>
                                 <input
-                                    required autoFocus
+                                    required 
                                     type="text"
                                     className="form-control"
                                     value={request.numOfSongs}
@@ -229,11 +232,13 @@ export const BookingForm = () => {
                                 <label className="label" htmlFor="date">
                                     Start Date:
                                 </label>
-                                <input
 
+                                <input
+                            
                                     type="date"
                                     required
                                     className="form-control"
+                                    id="startDate"
                                     onChange={
                                         (event) => {
                                             const copy = { ...request }
@@ -252,10 +257,13 @@ export const BookingForm = () => {
                                 <label htmlFor="date">
                                     End Date:
                                 </label>
+
                                 <input
+                                    max={request.endDate}
                                     required
                                     type="date"
                                     className="form-control"
+                                    id="endDate"
                                     onChange={
                                         (event) => {
                                             const copy = { ...request }
@@ -320,7 +328,7 @@ export const BookingForm = () => {
                                 <div className="radioLabel">
                                     <input
 
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={true}
@@ -337,7 +345,7 @@ export const BookingForm = () => {
                                     >Yes</label>
 
                                     <input
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={false}
@@ -366,7 +374,7 @@ export const BookingForm = () => {
                                 <div className="radioLabel">
                                     <input
 
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={true}
@@ -382,7 +390,7 @@ export const BookingForm = () => {
                                     <label className="radioLabel">Yes</label>
 
                                     <input
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={false}
@@ -411,7 +419,7 @@ export const BookingForm = () => {
                                 <div className="radioLabel">
                                     <input
 
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={true}
@@ -428,7 +436,7 @@ export const BookingForm = () => {
                                     >Yes</label>
 
                                     <input
-                                        required autoFocus
+                                        required 
                                         type="radio"
                                         className="form-control"
                                         value={false}
@@ -451,11 +459,11 @@ export const BookingForm = () => {
                             onClick={(clickEvent) => {
                                 submitButtonClick(clickEvent)
                             }}
-                            className="submitButton">
+                            className="submitFormButton">
                             Submit Request
                         </button>
                     </form>
-                </div>}         
+                </div>}
         </>
 
     )

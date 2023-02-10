@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./Gallery.css"
 
 export const AddGalleryImage = () => {
 
@@ -42,12 +43,12 @@ export const AddGalleryImage = () => {
 
 
     return (
-        <>
-            <h2>Add New Image</h2>
+        <div className="addImagePage">
+            <h2 className="galleryHeader">Add New Image</h2>
             <form>
                 <fieldset>
                     <div className="form-group">
-                        <h3 htmlFor="imgURL">Image URL: </h3>
+                        <h3 className="label" htmlFor="imgURL">Image URL: </h3>
                         <input
                             required
                             id="imgURL"
@@ -72,6 +73,6 @@ export const AddGalleryImage = () => {
                 Add New Image
 
             </button>
-        </>
+        </div>
     )
 }

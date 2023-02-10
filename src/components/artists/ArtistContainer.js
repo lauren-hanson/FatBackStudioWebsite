@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArtistSearch } from "../artists/ArtistSearch"
+//import { ArtistSearch } from "../artists/ArtistSearch"
 import { ArtistList } from "../artists/ArtistList"
 
 export const ArtistContainer = () => { 
@@ -8,7 +8,7 @@ export const ArtistContainer = () => {
 
     return (
         <>
-        < ArtistSearch setterFunction={setSearchTerms}/> 
+        {/* < ArtistSearch setterFunction={setSearchTerms}/>  */}
         < ArtistList searchTermState={searchTerms}/> 
         </>
     )

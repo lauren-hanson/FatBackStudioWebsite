@@ -24,28 +24,6 @@ export const NavBar = () => {
 		</>
 	}
 
-    // if (fatbackUserObject.staff) { 
-    //     return <StaffNavBar/> 
-    // } else { 
-    //     return <ClientNavBar/> 
-    // }
-
-
-    // if (localFatBackUser === false) {
-    //     return <PublicNavBar />
-    // } else if (fatbackUserObject.staff) { 
-    //     return <StaffNavBar/> 
-    // } else if (fatbackUserObject.staff === false) { 
-    //     return <ClientNavBar/> 
-    // }
-
-
-    // if (fatbackUserObject.staff) { 
-    //     return <StaffNavBar/> 
-    // } else if () { 
-    //     return <ClientNavBar/> 
-    // }
-
 
 }
 
