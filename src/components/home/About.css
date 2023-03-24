@@ -81,14 +81,6 @@
 }
 
 
-/* .reserveButton {
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: center;
-    align-content: center; 
-    width: 100px;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-} */
+.reserveButton {
+   margin-bottom: 20px; 
+}

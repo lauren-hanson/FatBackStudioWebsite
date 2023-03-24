@@ -1,38 +1,38 @@
-import { useEffect, useState } from "react"
-//import { ModalWindow } from "./ModalTest"
+// import { useEffect, useState } from "react"
+// import { ModalWindow } from "./ModalTest"
 
-export const StaffGreeting = () => {
+// export const StaffGreeting = () => {
 
-    const [refresh, setRefresh] = useState(true)
+//     const [refresh, setRefresh] = useState(true)
 
-    const localFatBackUser = localStorage.getItem("fatback_user")
-    const fatbackUserObject = JSON.parse(localFatBackUser)
+//     const localFatBackUser = localStorage.getItem("fatback_user")
+//     const fatbackUserObject = JSON.parse(localFatBackUser)
 
-    const windowAlert = () => {
+//     const windowAlert = () => {
 
-        alert(`Welcome FatBack Fam!`)
-    }
+//         alert(`Welcome FatBack Fam!`)
+//     }
 
-    useEffect(() => {
+//     useEffect(() => {
 
-        fetch('http://localhost:8088/users')
+//         fetch('http://localhost:8088/users')
 
-            .then(response => response.json())
+//             .then(response => response.json())
 
-            .then(() => {
-                setRefresh(!refresh)
-            })
+//             .then(() => {
+//                 setRefresh(!refresh)
+//             })
 
-            .then(() => {
-                windowAlert()
-                // <ModalWindow /> 
-            })
-
-
-    },
-        [])
+//             .then(() => {
+//                 windowAlert()
+//                 // <ModalWindow /> 
+//             })
 
 
-}
+//     },
+//         [])
+
+
+// }
 
 
