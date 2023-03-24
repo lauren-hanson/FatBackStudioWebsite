@@ -30,7 +30,7 @@ The the login and registration code written here is completely insecure and woul
 1. Clone this repository and change to the directory in the terminal.
 
 ```sh
-git clone https://github.com/lauren-hanson/FatBackStudioWebsite
+git clone git@github.com:lauren-hanson/FatBackStudioWebsite.git
 cd fatback-studio
 ```
 
