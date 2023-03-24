@@ -64,7 +64,7 @@ Username: user@fatbackstudio.com<i>demo</i>
 
 #### ERD
 
-<imgsrc='https://dbdiagram.io/embed/63816f5bc9abfc611175485c'/>
+<img src='https://dbdiagram.io/embed/63816f5bc9abfc611175485c'/>
 
 #### Wireframe
 
