@@ -1,0 +1,185 @@
+body {
+    padding: 20px;
+
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid #404040;
+    width: 75%; 
+    margin: 20px 0px 0px 12%; 
+    padding: 20px 0px; 
+
+}
+
+.statusUpdate,
+.approvalNotice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 25px 0px;
+    color: #2e2029;
+}
+
+.checkMark {
+    text-align: right;
+}
+
+.requestHeader,
+.bookingHeader,
+.futureBookingsHeader,
+.editRequestHeader {
+    font-size: 50px;
+    font-weight: lighter;
+    color: #2e2029;
+}
+
+.label {
+    font-size: 30px;
+    color: #2e2029;
+}
+
+
+.editRequest,
+.myrequest {
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+
+}
+
+
+
+.acceptedBookingInfo {
+    border: 5px solid #2e2029;
+    padding: 10px 50px;
+
+
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    clear: none;
+
+}
+
+.form-control,
+#genre {
+    background-color: white;
+    width: 300px; 
+    font-size: 20px; 
+  
+}
+
+#startDate, #endDate {
+    font-size: 20px; 
+}
+
+.radioLabel {
+    margin-right: 15px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #2e2029;
+}
+
+.radioButton {
+    background-color: #090a0c;
+}
+
+
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
+
+.radioButton,
+.editButton,
+.editRequestButton,
+.deleteButton,
+.deleteRequestButton,
+.saveEditButton,
+.reviewRequestButton,
+.reviewFutureBookings,
+.requestResetButton  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+
+.requestResetButton { 
+    margin-left: 45%; 
+}
+
+.saveEditButton {
+    float: right;
+}
+
+#myrequest { 
+    border: 5px solid #05030A;
+    padding: 20px; 
+    color: #17070b;
+    opacity: 90%; 
+    background-color: #e9dddb;
+    display: flex;
+    align-items: center;
+    opacity: 95%;
+    margin-left: 30%; 
+    width: 35%; 
+    font-size: 25px; 
+
+}
+input[type=radio],
+input.radio {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 30px;
+}
+
+input[type="text"],
+input.text {
+    width: 600px;
+
+}
+
+.noBookingStatus{ 
+    font-size: 20px; 
+}
+
+.submitButton,
+.submitFormButton {
+    float: right;
+    width: 100px;
+    padding: 25px;
+    background-color: white; 
+
+}
+
+

@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+## FatBack Studio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Application Overview
 
-## Available Scripts
+This application is a website for a music recording studio. Public are able to view details about the studio and if they are interested in booking, they can create an account. 
 
-In the project directory, you can run:
+FatBack Studio creates a singular platform for potential clients to create a request that can be easily reviewed by a staff member. 
 
-### `npm start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>
+• Users are able to make a booking request. They can edit this request until it has either been accepted or denied by an admin.
+<br>
+<br>• Users are able to view website details. <br>• Admin can accept or deny requests. 
+<br>• Admin are able to edit/delete website information. 
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies Used
 
-### `npm test`
+![HTML5](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Git](https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/VSCode%20-%23007ACC.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white)!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running This Application
 
-### `npm run build`
+#### First, a note about authentication...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Now that we've cleared that up...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository and change to the directory in the terminal.
 
-### `npm run eject`
+```sh
+git clone git@github.com:lauren-hanson/FatBackStudioWebsite.git
+cd fatback-studio
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Launch the client.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+    npm install
+    npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Access the data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<a href="https://github.com/lauren-hanson/FatBackStudioAPI" target="_blank"><img src="https://img.shields.io/badge/Click_here%20-%236ae689.svg?&style=for-the-badge&&logoColor=white" alt="FatBackStudioAPI" style="height: auto !important; width: auto !important;" /></a>
 
-## Learn More
+#### Demo User Credentials
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Once you are running the server you can log in with these credentials to see all three views that have been created: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p>
+Username: admin@fatbackstudio.com<i>demo</i>
+</p>
 
-### Code Splitting
+<p>
+Username: staff@fatbackstudio.com<i>demo</i>
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p>
+Username: user@fatbackstudio.com<i>demo</i>
+</p>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### ERD
 
-### Making a Progressive Web App
+<iframe width="560" height="315" src='https://dbdiagram.io/embed/63816f5bc9abfc611175485c'> </iframe>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Wireframe
 
-### Advanced Configuration
+<a href="https://sketchboard.me/TDxyJ8O8HuO#/"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+#### Created by Lauren Hanson
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://github.com/lauren-hanson" target="_blank"><img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="Lauren Hanson GitHub" style="height: auto !important;width: auto !important;" /></a> <a href="https://www.linkedin.com/in/lohanson/" target="_blank"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="Lauren Hanson LinkedIn" style="height: auto !important;width: auto !important;" /></a>
