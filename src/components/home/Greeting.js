@@ -25,7 +25,7 @@ export const Greeting = () => {
                 const singleStaff = userInfo[0]
                 setUsers(singleStaff)
             })
-    }, [users])
+    }, [])
 
     useEffect(() => {
         fetch(`http://localhost:8088/requests?isPending=true`)

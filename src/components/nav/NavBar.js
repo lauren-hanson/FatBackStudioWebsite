@@ -4,25 +4,25 @@ import { PublicNavBar } from "./PublicNavBar"
 import "./NavBar.css"
 
 export const NavBar = () => {
-   
+
     const localFatBackUser = localStorage.getItem("fatback_user")
-	const fatbackUserObject = JSON.parse(localFatBackUser)
+    const fatbackUserObject = JSON.parse(localFatBackUser)
 
     if (!fatbackUserObject) {
         return <>
-			<PublicNavBar />  
+            <PublicNavBar />
         </>
-    } 
+    }
     else if (fatbackUserObject.staff) {
         return <>
-        	<StaffNavBar />
+            <StaffNavBar />
         </>
-    } 
-	else {
-		return <>
-			<ClientNavBar />
-		</>
-	}
+    }
+    else {
+        return <>
+            <ClientNavBar />
+        </>
+    }
 
 
 }
