@@ -64,7 +64,7 @@ Username: user@fatbackstudio.com<i>demo</i>
 
 #### ERD
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/63816f5bc9abfc611175485c'> </iframe>
+<imgsrc='https://dbdiagram.io/embed/63816f5bc9abfc611175485c'/>
 
 #### Wireframe
 
